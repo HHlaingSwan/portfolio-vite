@@ -25,21 +25,23 @@ import {
 	SiPostgresql,
 	SiBootstrap,
 	SiVite,
+	SiReactquery,
+	SiShadcnui,
 } from "react-icons/si";
 
 const LogoSlide = () => {
 	const logos = [
 		{ icon: <FaReact size={50} />, name: "React", color: "#61DAFB" },
 		{ icon: <SiNextdotjs size={50} />, name: "Next.js", color: "#000000" },
-		// { icon: <FaJava size={50} />, name: "Java", color: "#007396" },
+		{ icon: <FaJava size={50} />, name: "Java", color: "#007396" },
 		{ icon: <FaDatabase size={50} />, name: "SQL", color: "#336791" },
 		{ icon: <SiMongodb size={50} />, name: "MongoDB", color: "#47A248" },
 		{ icon: <SiPrisma size={50} />, name: "Prisma", color: "#2D3748" },
 		{ icon: <SiTailwindcss size={50} />, name: "Tailwind", color: "#06B6D4" },
 		{ icon: <SiJavascript size={50} />, name: "JavaScript", color: "#F7DF1E" },
 		{ icon: <SiTypescript size={50} />, name: "TypeScript", color: "#3178C6" },
-		// { icon: <FaNodeJs size={50} />, name: "Node.js", color: "#339933" },
-		// { icon: <SiExpress size={50} />, name: "Express", color: "#000000" },
+		{ icon: <FaNodeJs size={50} />, name: "Node.js", color: "#339933" },
+		{ icon: <SiExpress size={50} />, name: "Express", color: "#000000" },
 		{ icon: <SiFirebase size={50} />, name: "Firebase", color: "#FFCA28" },
 		{ icon: <SiRedux size={50} />, name: "Redux", color: "#764ABC" },
 		{ icon: <SiGraphql size={50} />, name: "GraphQL", color: "#E10098" },
@@ -49,8 +51,14 @@ const LogoSlide = () => {
 		{ icon: <FaCss3Alt size={50} />, name: "CSS3", color: "#1572B6" },
 		{ icon: <SiBootstrap size={50} />, name: "Bootstrap", color: "#7952B3" },
 		{ icon: <FaGitAlt size={50} />, name: "Git", color: "#F05032" },
-		// { icon: <FaDocker size={50} />, name: "Docker", color: "#2496ED" },
+		{ icon: <FaDocker size={50} />, name: "Docker", color: "#2496ED" },
 		{ icon: <SiVite size={50} />, name: "Vite", color: "#646CFF" },
+		{
+			icon: <SiReactquery size={50} />,
+			name: "TanStack Query",
+			color: "#FF4154",
+		},
+		{ icon: <SiShadcnui size={50} />, name: "Shadcn UI", color: "#000000" },
 	];
 
 	// Duplicate the logos array to create the infinite loop effect
@@ -59,7 +67,7 @@ const LogoSlide = () => {
 	return (
 		<section className='py-16  overflow-hidden'>
 			<div className='container mx-auto mb-8 text-center'>
-				<h2 className='text-3xl font-bold mb-2'>Technologies I Work With</h2>
+				<h2 className='text-3xl font-bold my-2'>Technologies I Work With</h2>
 				<p className='text-gray-400 max-w-xl mx-auto'>
 					I'm proficient in these modern technologies and frameworks
 				</p>

@@ -52,9 +52,9 @@ const Showcase = () => {
 	}, []);
 
 	return (
-		<section className='px-4 py-10 max-w-7xl mx-auto '>
+		<section className='px-4 py-10 max-w-7xl mx-auto mt-3 '>
 			{/* Content */}
-			<div className='md:mb-8 mb-16 text-center '>
+			<div className='md:mb-8 mb-20 text-center '>
 				<h2 className='text-3xl font-bold mb-2'>My Work Showcase</h2>
 				<p className='text-gray-400 max-w-xl mx-auto'>
 					A collection of recent projects, showcasing design, responsiveness,

@@ -6,17 +6,19 @@ import Showcase from "./sections/Showcase";
 import LogoSlide from "./sections/LogoSlide";
 import MyExperience from "./sections/MyExperience";
 import Footer from "./sections/Footer";
+import ContactMe from "./sections/ContactMe";
 
 const App = () => {
 	return (
 		<>
 			<div className=''>
-				{/* <TopBar /> */}
+				<TopBar />
 				<Hero />
 				{/* <About /> */}
 				<Showcase />
 				<LogoSlide />
 				<MyExperience />
+				{/* <ContactMe /> */}
 				<Footer />
 			</div>
 		</>

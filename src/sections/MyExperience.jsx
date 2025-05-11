@@ -1,5 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
 	{
@@ -42,13 +47,38 @@ const experiences = [
 
 const MyExperience = () => {
 	const containerRef = useRef(null);
-	const { scrollYProgress } = useScroll({
-		target: containerRef,
-		offset: ["start end", "end end"],
-	});
+	const timelineRef = useRef(null);
+
+	// Set up GSAP animation for the timeline line
+	useEffect(() => {
+		const timeline = timelineRef.current;
+
+		if (timeline && containerRef.current) {
+			// Initial setup - hide the line
+			gsap.set(timeline, { scaleY: 0 });
+
+			// Create the animation that follows scroll
+			gsap.to(timeline, {
+				scaleY: 1,
+				ease: "none",
+				scrollTrigger: {
+					trigger: containerRef.current,
+					start: "top 80%", // Start animation when the top of the section hits 80% from the top of viewport
+					end: "bottom 20%", // End animation when the bottom of the section hits 20% from the top of viewport
+					scrub: 0.5, // Smooth animation that follows scroll with a slight delay
+					// markers: true, // Uncomment for debugging
+				},
+			});
+		}
+
+		// Cleanup function
+		return () => {
+			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+		};
+	}, []);
 
 	return (
-		<section className='py-16 '>
+		<section className='py-16'>
 			<div className='container mx-auto px-4'>
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -66,10 +96,10 @@ const MyExperience = () => {
 				<div
 					className='max-w-4xl mx-auto relative'
 					ref={containerRef}>
-					{/* Main timeline line that grows with scroll */}
-					<motion.div
-						className='absolute left-[7px] top-[30px] bottom-0 w-1 bg-amber-500 origin-top'
-						style={{ scaleY: scrollYProgress }}></motion.div>
+					{/* Main timeline line that grows with scroll using GSAP */}
+					<div
+						ref={timelineRef}
+						className='absolute left-[7px] top-[30px] bottom-0 w-1 bg-amber-500 origin-top'></div>
 
 					{experiences.map((exp, index) => (
 						<motion.div
@@ -79,8 +109,6 @@ const MyExperience = () => {
 							viewport={{ once: true }}
 							transition={{ duration: 0.5, delay: index * 0.1 }}
 							className='mb-12 relative'>
-							{/* Remove the individual timeline connectors since we now have the main animated one */}
-
 							<div className='flex gap-6'>
 								{/* Timeline dot with animation */}
 								<motion.div
@@ -93,7 +121,7 @@ const MyExperience = () => {
 								</motion.div>
 
 								{/* Content */}
-								<div className='bg-gray-900 rounded-lg p-6 shadow-lg flex-1'>
+								<div className='bg-gray-900 rounded-lg p-6 shadow-lg flex-1 relative overflow-hidden hover:shadow-amber-500/20 hover:shadow-lg transition-all duration-300'>
 									<div className='flex flex-col md:flex-row md:justify-between md:items-center mb-4'>
 										<div>
 											<h3 className='text-xl font-bold text-white'>
