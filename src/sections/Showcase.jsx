@@ -52,18 +52,18 @@ const Showcase = () => {
 	}, []);
 
 	return (
-		<section className='px-4 py-10 max-w-7xl mx-auto'>
+		<section className='px-4 py-10 max-w-7xl mx-auto '>
 			{/* Content */}
-			<div className='mb-8 text-center'>
+			<div className='md:mb-8 mb-16 text-center '>
 				<h2 className='text-3xl font-bold mb-2'>My Work Showcase</h2>
-				<p className='text-gray-600 max-w-xl mx-auto'>
+				<p className='text-gray-400 max-w-xl mx-auto'>
 					A collection of recent projects, showcasing design, responsiveness,
 					and creativity.
 				</p>
 			</div>
 
 			{/* Photo Grid */}
-			<div className='grid grid-cols-1 gap-8'>
+			<div className='grid grid-cols-1 gap-20 md:gap-8'>
 				{projects.map((project, index) => (
 					<motion.div
 						key={index}
@@ -71,7 +71,7 @@ const Showcase = () => {
 						whileInView={{ opacity: 1, y: 0 }}
 						viewport={{ once: true, amount: 0.3 }}
 						transition={{ duration: 0.5, delay: index * 0.1 }}
-						className={`relative h-auto rounded-lg shadow-lg overflow-hidden md:p-10 ${
+						className={`relative h-auto rounded-lg shadow-lg overflow-hidden  md:p-10 ${
 							!isMobile ? "group" : ""
 						}`}>
 						<img
@@ -80,7 +80,7 @@ const Showcase = () => {
 							className={`w-full h-full object-cover ${
 								!isMobile
 									? "transition-transform duration-500 group-hover:scale-110"
-									: "h-48"
+									: "h-72"
 							}`}
 						/>
 						<div

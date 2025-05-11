@@ -5,6 +5,7 @@ import About from "./sections/About";
 import Showcase from "./sections/Showcase";
 import LogoSlide from "./sections/LogoSlide";
 import MyExperience from "./sections/MyExperience";
+import Footer from "./sections/Footer";
 
 const App = () => {
 	return (
@@ -16,6 +17,7 @@ const App = () => {
 				<Showcase />
 				<LogoSlide />
 				<MyExperience />
+				<Footer />
 			</div>
 		</>
 	);
