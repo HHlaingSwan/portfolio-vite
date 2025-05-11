@@ -29,11 +29,11 @@ const Footer = () => {
 						<FaArrowUp />
 					</motion.button>
 				</div>
-				<div className='mx-auto w-full text-center py-8 my-10'>
+				{/* <div className='mx-auto w-full text-center py-8 my-10'>
 					<p className='text-amber-400 text-xl font-semibold animate-pulse'>
 						I Love You Thae Suu YaDaNar Moe ❤️
 					</p>
-				</div>
+				</div> */}
 
 				{/* Main footer content */}
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>
