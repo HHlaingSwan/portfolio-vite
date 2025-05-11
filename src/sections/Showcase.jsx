@@ -3,21 +3,21 @@ import { motion } from "framer-motion";
 
 const projects = [
 	{
-		image: "../../public/Movie-PJ/homeview.png",
+		image: "/Movie-PJ/homeview.png",
 		title: "Movie Platform",
 		description:
 			"A responsive movie browsing application with search functionality and dynamic content loading.",
 		tech: "React, API Integration, Responsive Design",
 	},
 	{
-		image: "../../public//Arcane/home.png",
+		image: "/Arcane/home.png",
 		title: "Arcane Website",
 		description:
 			"Fan website for the Arcane series with character profiles and interactive elements.",
 		tech: "React, CSS Animations, Styled Components",
 	},
 	{
-		image: "../../public//Shopping/homeview.png",
+		image: "/Shopping/homeview.png",
 		title: "E-Commerce Platform",
 		description:
 			"Full-featured shopping website with product filtering and cart functionality.",
