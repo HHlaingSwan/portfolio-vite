@@ -31,7 +31,7 @@ const ContactMe = () => {
 				import.meta.env.VITE_APP_SERVICE_EMAILJS_ID,
 				import.meta.env.VITE_APP_SERVICE_TEMPLATE_ID,
 				formRef.current,
-				import.meta.env.VITE_APP_SERVICE_PUBLIC_KEY
+				import.meta.env.VITE_APP_SERVICE_PUBLIC_KEY_ID
 			)
 			.then((result) => {
 				setLoading(false);
