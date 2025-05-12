@@ -19,7 +19,9 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<section className=' h-100vh  '>
+		<section
+			id='home'
+			className=' h-100vh  '>
 			<div className='container h-100vh  px-4  md:pl-10   absolute top-50 md:top-30   lg:top-50 left-0   '>
 				<motion.h1
 					initial={{ opacity: 0, y: 20 }}

@@ -5,6 +5,7 @@ import {
 	FaTwitter,
 	FaEnvelope,
 	FaArrowUp,
+	FaFacebook,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -105,7 +106,7 @@ const Footer = () => {
 						<a
 							href='mailto:your.email@example.com'
 							className='text-gray-400 hover:text-amber-400 transition-colors duration-300 flex items-center gap-2 mb-2'>
-							<FaEnvelope /> your.email@example.com
+							<FaEnvelope /> hhlaingswan.dev@email.com
 						</a>
 					</div>
 				</div>
@@ -113,7 +114,7 @@ const Footer = () => {
 				{/* Social links */}
 				<div className='flex justify-center space-x-6 mb-8'>
 					<motion.a
-						href='https://github.com/yourusername'
+						href='https://github.com/HHlaingSwan'
 						target='_blank'
 						rel='noopener noreferrer'
 						className='text-gray-400 hover:text-white transition-colors duration-300'
@@ -121,7 +122,7 @@ const Footer = () => {
 						<FaGithub size={24} />
 					</motion.a>
 					<motion.a
-						href='https://linkedin.com/in/yourusername'
+						href='https://www.linkedin.com/in/h-hlaing-swan-345956353?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'
 						target='_blank'
 						rel='noopener noreferrer'
 						className='text-gray-400 hover:text-white transition-colors duration-300'
@@ -129,12 +130,12 @@ const Footer = () => {
 						<FaLinkedin size={24} />
 					</motion.a>
 					<motion.a
-						href='https://twitter.com/yourusername'
+						href='https://www.facebook.com/profile.php?id=100036843302218&mibextid=ZbWKwL'
 						target='_blank'
 						rel='noopener noreferrer'
 						className='text-gray-400 hover:text-white transition-colors duration-300'
 						whileHover={{ y: -3, color: "#fff" }}>
-						<FaTwitter size={24} />
+						<FaFacebook size={24} />
 					</motion.a>
 				</div>
 

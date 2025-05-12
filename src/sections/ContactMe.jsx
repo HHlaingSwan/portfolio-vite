@@ -28,10 +28,10 @@ const ContactMe = () => {
 		// Replace these with your actual Email.js service ID, template ID, and public key
 		emailjs
 			.sendForm(
-				"YOUR_SERVICE_ID",
-				"YOUR_TEMPLATE_ID",
+				import.meta.env.VITE_APP_SERVICE_EMAILJS_ID,
+				import.meta.env.VITE_APP_SERVICE_TEMPLATE_ID,
 				formRef.current,
-				"YOUR_PUBLIC_KEY"
+				import.meta.env.VITE_APP_SERVICE_PUBLIC_KEY
 			)
 			.then((result) => {
 				setLoading(false);
@@ -70,20 +70,25 @@ const ContactMe = () => {
 
 				<div className='max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center'>
 					{/* Cartoon Image */}
-					<motion.div 
+					<motion.div
 						initial={{ opacity: 0, x: -50 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.5 }}
 						className='w-full md:w-2/5 flex justify-center'>
 						<div className='relative'>
-							<img 
-								src="/contact-cartoon.svg" 
-								alt="Contact Illustration" 
+							{/* Option 1: Use a remote URL (temporary solution) */}
+							<img
+								src='/undraw_dev-productivity_5wps.svg'
+								alt='Contact Illustration'
 								className='w-full max-w-md'
 							/>
-							{/* You can add this file to your public folder */}
-							
+
+							{/* Option 2: Use an emoji or icon as a fallback */}
+							{/* <div className='text-9xl flex items-center justify-center h-64 w-64 bg-gray-800 rounded-full'>
+								👨‍💻
+							</div> */}
+
 							{/* Decorative elements */}
 							<div className='absolute -top-10 -left-10 w-20 h-20 bg-amber-500/20 rounded-full blur-xl'></div>
 							<div className='absolute -bottom-5 -right-5 w-32 h-32 bg-purple-500/20 rounded-full blur-xl'></div>
@@ -91,7 +96,7 @@ const ContactMe = () => {
 					</motion.div>
 
 					{/* Contact Form */}
-					<motion.div 
+					<motion.div
 						initial={{ opacity: 0, x: 50 }}
 						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true }}

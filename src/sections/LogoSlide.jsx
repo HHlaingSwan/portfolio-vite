@@ -65,7 +65,7 @@ const LogoSlide = () => {
 	const duplicatedLogos = [...logos, ...logos];
 
 	return (
-		<section className='py-16  overflow-hidden'>
+		<section className='py-16 bg-gray-900  overflow-hidden'>
 			<div className='container mx-auto mb-8 text-center'>
 				<h2 className='text-3xl font-bold my-2'>Technologies I Work With</h2>
 				<p className='text-gray-400 max-w-xl mx-auto'>

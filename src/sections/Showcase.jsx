@@ -52,7 +52,9 @@ const Showcase = () => {
 	}, []);
 
 	return (
-		<section className='px-4 py-10 max-w-7xl mx-auto mt-3 '>
+		<section
+			id='projects'
+			className='px-4 py-10 max-w-7xl mx-auto mt-3 '>
 			{/* Content */}
 			<div className='md:mb-8 mb-20 text-center '>
 				<h2 className='text-3xl font-bold mb-2'>My Work Showcase</h2>

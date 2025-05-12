@@ -14,11 +14,11 @@ const App = () => {
 			<div className=''>
 				<TopBar />
 				<Hero />
-				{/* <About /> */}
+				<About />
 				<Showcase />
 				<LogoSlide />
 				<MyExperience />
-				{/* <ContactMe /> */}
+				<ContactMe />
 				<Footer />
 			</div>
 		</>
