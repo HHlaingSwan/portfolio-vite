@@ -71,6 +71,26 @@ const MyExperience = () => {
 			});
 		}
 
+		// Animate experience cards - similar to About.jsx
+		const experienceCards = document.querySelectorAll(".experience-card");
+		experienceCards.forEach((card, index) => {
+			// Set initial state
+			gsap.set(card, { opacity: 0, y: 50 });
+
+			// Create animation
+			gsap.to(card, {
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				scrollTrigger: {
+					trigger: card,
+					start: "top 85%",
+					toggleActions: "play none none none",
+				},
+				delay: index * 0.2,
+			});
+		});
+
 		// Cleanup function
 		return () => {
 			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
@@ -123,7 +143,7 @@ const MyExperience = () => {
 								</motion.div>
 
 								{/* Content */}
-								<div className='bg-gray-900 rounded-lg p-6 shadow-lg flex-1 relative overflow-hidden hover:shadow-amber-500/20 hover:shadow-lg transition-all duration-300'>
+								<div className='experience-card bg-gray-900 rounded-lg p-6 shadow-lg flex-1 relative overflow-hidden hover:shadow-amber-500/20 hover:shadow-lg transition-all duration-300'>
 									<div className='flex flex-col md:flex-row md:justify-between md:items-center mb-4'>
 										<div>
 											<h3 className='text-xl font-bold text-white'>

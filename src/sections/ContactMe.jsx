@@ -116,6 +116,7 @@ const ContactMe = () => {
 									type='text'
 									id='name'
 									name='name'
+									placeholder='your name'
 									value={form.name}
 									onChange={handleChange}
 									required
@@ -131,6 +132,7 @@ const ContactMe = () => {
 								</label>
 								<input
 									type='email'
+									placeholder='example@gmail.com'
 									id='email'
 									name='email'
 									value={form.email}
@@ -151,6 +153,7 @@ const ContactMe = () => {
 									name='message'
 									value={form.message}
 									onChange={handleChange}
+									placeholder='leave a phone no or email to contact you back'
 									required
 									rows='5'
 									className='w-full bg-gray-700/70 text-white border border-gray-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-300'></textarea>
