@@ -17,19 +17,22 @@ const projects = [
 		tech: "React, CSS Animations, Styled Components",
 	},
 	{
-		image: "/Shopping/homeview.png",
-		title: "E-Commerce Platform",
+		image: "/Snake-Game/snake-game-demo.png",
+		title: "Snake Game",
 		description:
-			"Full-featured shopping website with product filtering and cart functionality.",
-		tech: "React, Context API, Tailwind CSS",
+			"A classic snake game with high scores and customizable difficulty levels.",
+		tech: "React, CSS Animations, Critical Rendering Path Optimization",
+		hoverShow: true,
+		video: "/Snake-Game/SnakeGameDemo.mp4",
 	},
 	// {
-	// 	image: "../../public/User Table/input.png",
-	// 	title: "User Management Dashboard",
+	// 	image: "/Shopping/homeview.png",
+	// 	title: "E-Commerce Platform",
 	// 	description:
-	// 		"Admin interface for managing user data with sorting and filtering capabilities.",
-	// 	tech: "React, Data Tables, Form Validation",
+	// 		"Full-featured shopping website with product filtering and cart functionality.",
+	// 	tech: "React, Context API, Tailwind CSS",
 	// },
+	// {
 ];
 
 const Showcase = () => {
