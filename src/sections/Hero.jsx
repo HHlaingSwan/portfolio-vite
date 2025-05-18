@@ -62,14 +62,14 @@ const Hero = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.8 }}
-					className='text-sm md:text-lg  text-gray-300 mb-1'>
+					className='text-sm md:text-lg  md:text-gray-300 text-shadow-black mb-1'>
 					Hi, I'm H.Hlaing Swan, a Frontend Developer based in Myanmar.
 				</motion.p>
 				<motion.p
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 1.0 }}
-					className='text-sm md:text-lg text-gray-300 mb-8'>
+					className='text-sm md:text-lg md:text-gray-300 text-shadow-black mb-8'>
 					I specialize in creating responsive and user-friendly websites using
 					React.js.
 				</motion.p>
