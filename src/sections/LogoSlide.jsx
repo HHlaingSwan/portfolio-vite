@@ -33,20 +33,20 @@ const LogoSlide = () => {
 	const logos = [
 		{ icon: <FaReact size={50} />, name: "React", color: "#61DAFB" },
 		{ icon: <SiNextdotjs size={50} />, name: "Next.js", color: "#000000" },
-		{ icon: <FaJava size={50} />, name: "Java", color: "#007396" },
+		// { icon: <FaJava size={50} />, name: "Java", color: "#007396" },
 		{ icon: <FaDatabase size={50} />, name: "SQL", color: "#336791" },
 		{ icon: <SiMongodb size={50} />, name: "MongoDB", color: "#47A248" },
 		{ icon: <SiPrisma size={50} />, name: "Prisma", color: "#2D3748" },
 		{ icon: <SiTailwindcss size={50} />, name: "Tailwind", color: "#06B6D4" },
 		{ icon: <SiJavascript size={50} />, name: "JavaScript", color: "#F7DF1E" },
 		{ icon: <SiTypescript size={50} />, name: "TypeScript", color: "#3178C6" },
-		{ icon: <FaNodeJs size={50} />, name: "Node.js", color: "#339933" },
-		{ icon: <SiExpress size={50} />, name: "Express", color: "#000000" },
+		// { icon: <FaNodeJs size={50} />, name: "Node.js", color: "#339933" },
+		// { icon: <SiExpress size={50} />, name: "Express", color: "#000000" },
 		{ icon: <SiFirebase size={50} />, name: "Firebase", color: "#FFCA28" },
 		{ icon: <SiRedux size={50} />, name: "Redux", color: "#764ABC" },
-		{ icon: <SiGraphql size={50} />, name: "GraphQL", color: "#E10098" },
+		// { icon: <SiGraphql size={50} />, name: "GraphQL", color: "#E10098" },
 		{ icon: <SiMysql size={50} />, name: "MySQL", color: "#4479A1" },
-		{ icon: <SiPostgresql size={50} />, name: "PostgreSQL", color: "#336791" },
+		// { icon: <SiPostgresql size={50} />, name: "PostgreSQL", color: "#336791" },
 		{ icon: <FaHtml5 size={50} />, name: "HTML5", color: "#E34F26" },
 		{ icon: <FaCss3Alt size={50} />, name: "CSS3", color: "#1572B6" },
 		{ icon: <SiBootstrap size={50} />, name: "Bootstrap", color: "#7952B3" },
@@ -105,32 +105,37 @@ const LogoSlide = () => {
 				</div>
 
 				{/* Second row of logos - moving right (in reverse order) */}
-				{/* <div className="flex overflow-hidden">
-          <motion.div
-            className="flex gap-16 px-4"
-            animate={{ x: [-2000, 0] }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 30,
-                ease: "linear",
-              },
-            }}
-          >
-            {duplicatedLogos.slice().reverse().map((logo, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <div 
-                  className="w-20 h-20 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 mb-2"
-                  style={{ color: logo.color }}
-                >
-                  {logo.icon}
-                </div>
-                <span className="text-sm font-medium text-gray-300">{logo.name}</span>
-              </div>
-            ))}
-          </motion.div>
-        </div> */}
+				<div className='flex overflow-hidden'>
+					<motion.div
+						className='flex gap-16 px-4'
+						animate={{ x: [-2000, 0] }}
+						transition={{
+							x: {
+								repeat: Infinity,
+								repeatType: "loop",
+								duration: 30,
+								ease: "linear",
+							},
+						}}>
+						{duplicatedLogos
+							.slice()
+							.reverse()
+							.map((logo, index) => (
+								<div
+									key={index}
+									className='flex flex-col items-center'>
+									<div
+										className='w-20 h-20 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 mb-2'
+										style={{ color: logo.color }}>
+										{logo.icon}
+									</div>
+									<span className='text-sm font-medium text-gray-300'>
+										{logo.name}
+									</span>
+								</div>
+							))}
+					</motion.div>
+				</div>
 			</div>
 		</section>
 	);

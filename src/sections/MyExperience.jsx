@@ -8,21 +8,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
 	{
-		position: "Frontend Developer",
-		company: "Tech Solutions Inc.",
-		duration: "Jan 2022 - Present",
+		position: "Junior Frontend Developer",
+		company: "MY DAY THU KYAWL CO.LTD",
+		duration: "Dec 2024 - Present",
 		description: [
 			"Developed responsive web applications using React and Next.js",
 			"Implemented state management solutions with Redux and Context API",
 			"Collaborated with UI/UX designers to create intuitive user interfaces",
-			"Optimized application performance and reduced load times by 40%",
+			"Integrated APIs to enhance functionality and data retrieval",
 		],
 		technologies: ["React", "Next.js", "Tailwind CSS", "Redux"],
 	},
 	{
 		position: "Web Developer Intern",
-		company: "Digital Creations",
-		duration: "Jun 2021 - Dec 2021",
+		company: "",
+		duration: "Sep 2024 - Nov 2024",
 		description: [
 			"Assisted in building and maintaining client websites",
 			"Created reusable components for the company's component library",
@@ -33,15 +33,15 @@ const experiences = [
 	},
 	{
 		position: "Freelance Developer",
-		company: "Self-employed",
-		duration: "2020 - 2021",
+		// company: "Self-employed",
+		duration: "2024",
 		description: [
 			"Designed and developed websites for small businesses",
 			"Implemented e-commerce solutions using modern technologies",
 			"Provided ongoing maintenance and support for clients",
 			"Managed project timelines and client expectations",
 		],
-		technologies: ["React", "MongoDB", "Express", "Node.js"],
+		technologies: ["React", "MongoDB", "Node.js"],
 	},
 ];
 

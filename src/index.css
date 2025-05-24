@@ -14,3 +14,24 @@ body {
 :root {
   --gradient: radial-gradient(circle, #e5e5e5, 0%, #fff 100%)
 }
+
+/* Custom Ant Design Modal styling */
+.project-modal .ant-modal-content {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+.project-modal .ant-modal-header {
+  background-color: #1f1f1f;
+  border-bottom: 1px solid #333;
+}
+
+.project-modal .ant-modal-body {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+.project-modal .ant-modal-footer {
+  background-color: #1f1f1f;
+  border-top: 1px solid #333;
+}

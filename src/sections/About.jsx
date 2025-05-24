@@ -107,23 +107,27 @@ const About = () => {
 
 								<div className='mb-4'>
 									<h4 className='text-lg font-semibold text-amber-500'>
-										University Name
+										Myanmar Technopreneur Academy - MTA
 									</h4>
-									<p className='text-gray-300'>
+									{/* <p className='text-gray-300'>
 										Bachelor of Science in Computer Science
-									</p>
+									</p> */}
 									<div className='flex items-center text-gray-400 mt-2'>
 										<FaCalendarAlt className='mr-2' />
-										<span>2019 - 2023</span>
+										<span>2024 - 2025</span>
 									</div>
 								</div>
 
 								<p className='text-gray-300 mb-4'>
-									During my time at [University Name], I developed a strong
-									foundation in computer science principles, algorithms, and
-									software development. I participated in various coding
-									competitions and hackathons, which helped me apply theoretical
-									knowledge to practical problems.
+									During my time at{" "}
+									<span className='text-amber-500'>
+										Myanmar Technopreneur Academy - MTA
+									</span>{" "}
+									, I developed a strong foundation in computer science
+									principles, algorithms, and software development. I
+									participated in various coding competitions and hackathons,
+									which helped me apply theoretical knowledge to practical
+									problems.
 								</p>
 							</div>
 						</div>

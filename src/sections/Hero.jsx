@@ -63,7 +63,8 @@ const Hero = () => {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.8 }}
 					className='text-sm md:text-lg  md:text-gray-300 text-shadow-black mb-1'>
-					Hi, I'm H.Hlaing Swan, a Frontend Developer based in Myanmar.
+					Hi, I'm <span className='text-amber-500'>H.Hlaing Swan</span> , a
+					Frontend Developer based in Myanmar.
 				</motion.p>
 				<motion.p
 					initial={{ opacity: 0, y: 20 }}
@@ -80,7 +81,7 @@ const Hero = () => {
 				</button> */}
 			</div>
 
-			<div className='w-full h-screen hidden md:inline'>
+			<div className='w-full h-screen hidden lg:inline'>
 				<video
 					src={heroVD}
 					autoPlay
@@ -91,7 +92,7 @@ const Hero = () => {
 			</div>
 			<div
 				className='w-full  h-screen
-			  md:hidden'>
+			  lg:hidden'>
 				<img
 					src={heroimg}
 					alt=''

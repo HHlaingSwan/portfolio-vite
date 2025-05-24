@@ -35,9 +35,9 @@ const TopBar = () => {
 	};
 
 	const handleGetInTouchClick = () => {
-		const contactSection = document.getElementById('contact');
+		const contactSection = document.getElementById("contact");
 		if (contactSection) {
-			contactSection.scrollIntoView({ behavior: 'smooth' });
+			contactSection.scrollIntoView({ behavior: "smooth" });
 		}
 		setMobileMenuOpen(false); // Close mobile menu if open
 	};
@@ -49,20 +49,22 @@ const TopBar = () => {
 				initial={{ y: -100 }}
 				animate={{ y: 0 }}
 				transition={{ duration: 0.5 }}
-				className={`fixed top-0 left-0 right-0 z-50 mx-auto my-5 max-w-6xl px-4 ${
+				className={`fixed top-0 left-0 right-0 z-50 mx-auto my-5 max-w-6xl  px-4 ${
 					scrolled
 						? "bg-gray-900/90 backdrop-blur-md shadow-lg"
 						: "bg-transparent"
-				} transition-all duration-300 rounded-full h-16 hidden md:flex justify-between items-center`}>
+				} transition-all duration-300 rounded-full h-18 hidden md:flex justify-between items-center`}>
 				{/* Logo */}
 				<div className='flex items-center'>
 					<motion.div
 						whileHover={{ rotate: 360 }}
 						transition={{ duration: 0.5 }}
 						className='w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold text-xl mr-3'>
-						P
+						H
 					</motion.div>
-					<span className='text-white font-bold text-xl'>Portfolio</span>
+					<span className='text-white font-bold hidden lg:inline text-xl'>
+						Hlaing Swan
+					</span>
 				</div>
 
 				{/* Navigation */}
@@ -99,7 +101,7 @@ const TopBar = () => {
 				initial={{ y: -100 }}
 				animate={{ y: 0 }}
 				transition={{ duration: 0.5 }}
-				className={`fixed top-0 left-0 right-0 z-50 px-4 py-3 ${
+				className={`fixed top-0 left-0 right-0 z-50 px-4 py-4 ${
 					scrolled
 						? "bg-gray-900/90 backdrop-blur-md shadow-lg"
 						: "bg-transparent"
@@ -107,9 +109,9 @@ const TopBar = () => {
 				{/* Mobile Logo */}
 				<div className='flex items-center'>
 					<div className='w-8 h-8 bg-amber-500 rounded-full flex items-center justify-center text-black font-bold text-lg mr-2'>
-						P
+						H
 					</div>
-					<span className='text-white font-bold text-lg'>Portfolio</span>
+					<span className='text-white font-bold text-lg'>Hlaing Swan</span>
 				</div>
 
 				{/* Mobile Menu Button */}

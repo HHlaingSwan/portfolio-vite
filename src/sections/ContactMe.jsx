@@ -55,7 +55,7 @@ const ContactMe = () => {
 			id='contact'
 			className='py-16 bg-gradient-to-b from-gray-900 to-gray-800'>
 			<div className='container mx-auto px-4'>
-				<motion.div
+				<div
 					initial={{ opacity: 0, y: 20 }}
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
@@ -66,16 +66,11 @@ const ContactMe = () => {
 						Have a project in mind or want to collaborate? Feel free to reach
 						out!
 					</p>
-				</motion.div>
+				</div>
 
 				<div className='max-w-5xl mx-auto flex flex-col md:flex-row gap-8 items-center'>
 					{/* Cartoon Image */}
-					<motion.div
-						initial={{ opacity: 0, x: -50 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.5 }}
-						className='w-full md:w-2/5 flex justify-center'>
+					<div className='w-full md:w-2/5 flex justify-center'>
 						<div className='relative'>
 							{/* Option 1: Use a remote URL (temporary solution) */}
 							<img
@@ -93,16 +88,11 @@ const ContactMe = () => {
 							<div className='absolute -top-10 -left-10 w-20 h-20 bg-amber-500/20 rounded-full blur-xl'></div>
 							<div className='absolute -bottom-5 -right-5 w-32 h-32 bg-purple-500/20 rounded-full blur-xl'></div>
 						</div>
-					</motion.div>
+					</div>
 
 					{/* Contact Form */}
-					<motion.div
-						initial={{ opacity: 0, x: 50 }}
-						whileInView={{ opacity: 1, x: 0 }}
-						viewport={{ once: true }}
-						transition={{ duration: 0.5, delay: 0.2 }}
-						className='w-full md:w-3/5'>
-						<motion.form
+					<div className='w-full md:w-3/5'>
+						<form
 							ref={formRef}
 							onSubmit={handleSubmit}
 							className='bg-gray-800/80 backdrop-blur-sm p-8 rounded-lg shadow-xl border border-gray-700/50'>
@@ -191,8 +181,8 @@ const ContactMe = () => {
 									{error}
 								</motion.p>
 							)}
-						</motion.form>
-					</motion.div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</section>
