@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Modal, Button } from "antd";
+import { Button } from "antd";
 
 const projectDetails = {
 	"Movie Platform": {
@@ -100,8 +100,6 @@ const projects = [
 
 const Showcase = () => {
 	const [isMobile, setIsMobile] = useState(false);
-	const [isModalOpen, setIsModalOpen] = useState(false);
-	const [selectedProject, setSelectedProject] = useState(null);
 
 	// Check if device is mobile
 	useEffect(() => {
@@ -172,11 +170,9 @@ const Showcase = () => {
 								</div>
 								<Button
 									className='bg-amber-500/10 text-amber-400 hover:text-amber-300 border-amber-500/30 hover:border-amber-400 w-full'
-									onClick={() => {
-										setSelectedProject(project.title);
-										setIsModalOpen(true);
-									}}>
-									See More
+									href={projectDetails[project.title].vercel}
+									target='_blank'>
+									Live Demo
 								</Button>
 							</div>
 						) : (
@@ -203,11 +199,9 @@ const Showcase = () => {
 										</div>
 										<Button
 											className='hover:text-amber-300 group-hover:opacity-100 transition-opacity duration-300'
-											onClick={() => {
-												setSelectedProject(project.title);
-												setIsModalOpen(true);
-											}}>
-											See More
+											href={projectDetails[project.title].vercel}
+											target='_blank'>
+											Live Demo
 										</Button>
 									</div>
 								</div>
@@ -216,88 +210,6 @@ const Showcase = () => {
 					</motion.div>
 				))}
 			</div>
-			{selectedProject && (
-				<Modal
-					title={
-						<h3 className='text-2xl font-bold text-amber-400 mb-4'>
-							{selectedProject}
-						</h3>
-					}
-					open={isModalOpen}
-					onCancel={() => setIsModalOpen(false)}
-					width={800}
-					centered
-					className='project-modal'
-					footer={[
-						<Button
-							key='github'
-							type='primary'
-							className='bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 mt-4'
-							href={projectDetails[selectedProject].github}
-							target='_blank'>
-							GitHub
-						</Button>,
-						<Button
-							key='vercel'
-							type='primary'
-							className='bg-amber-500 hover:bg-amber-600 border-amber-500 hover:border-amber-600 ml-2'
-							href={projectDetails[selectedProject].vercel}
-							target='_blank'>
-							Live Demo
-						</Button>,
-						<Button
-							key='close'
-							className='text-gray-300 hover:text-amber-500 hover:border-amber-500 ml-2'
-							onClick={() => setIsModalOpen(false)}>
-							Close
-						</Button>,
-					]}>
-					<div className='space-y-4 my-3'>
-						{projects.find((p) => p.title === selectedProject)?.type ===
-						"photo" ? (
-							<img
-								src={
-									projects.find((p) => p.title === selectedProject)
-										?.detailImages
-								}
-								alt={selectedProject}
-								className='w-full h-64 object-cover rounded-lg shadow-md mb-4'
-							/>
-						) : (
-							<video
-								src={projects.find((p) => p.title === selectedProject)?.preview}
-								alt={selectedProject}
-								className='w-full h-64 object-cover rounded-lg shadow-md mb-4'
-								controls
-								autoPlay
-								loop
-								muted
-							/>
-						)}
-
-						<div className='whitespace-pre-line text-base  text-gray-300'>
-							{projectDetails[selectedProject].documentation}
-						</div>
-						<div className='mt-4'>
-							<h4 className='text-lg font-semibold text-amber-500 mb-2'>
-								Technologies Used
-							</h4>
-							<div className='flex flex-wrap gap-2'>
-								{projects
-									.find((p) => p.title === selectedProject)
-									?.tech.split(", ")
-									.map((tech, i) => (
-										<span
-											key={i}
-											className='bg-amber-500/20 text-amber-400 px-3 py-1 rounded-full text-sm font-medium'>
-											{tech}
-										</span>
-									))}
-							</div>
-						</div>
-					</div>
-				</Modal>
-			)}
 		</section>
 	);
 };
