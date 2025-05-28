@@ -4,40 +4,21 @@ import { Button } from "antd";
 
 const projectDetails = {
 	"Movie Platform": {
-		documentation:
-			"A comprehensive movie browsing platform built with React. Features include:\n- Dynamic search functionality\n- Responsive grid layout\n- Detailed movie information\n- User-friendly interface",
-		github: "https://github.com/HHlaingSwan/IMDB-Next",
 		vercel: "https://imdb-next-h-hlaing-swans-projects.vercel.app/",
 	},
 	"Arcane Website": {
-		documentation:
-			"A fan website dedicated to the Arcane series featuring:\n- Character profiles\n- Interactive elements\n- Stunning animations\n- Responsive design",
-		github: "https://github.com/HHlaingSwan/Arcane-Game",
 		vercel: "https://arcane-game.vercel.app/",
 	},
 	"Snake Game": {
-		documentation:
-			"A modern implementation of the classic snake game with:\n- High score tracking\n- Multiple difficulty levels\n- Smooth animations\n- Mobile compatibility",
-		github: "https://github.com/HHlaingSwan/Snake-Game",
 		vercel: "https://snake-game-black-eight.vercel.app/",
 	},
 	"E-Commerce Platform": {
-		documentation:
-			"A full-featured e-commerce website with product filtering, shopping cart, and checkout functionality.",
-		github: "https://github.com/HHlaingSwan/E-Shop	",
 		vercel: "https://e-shop-three-jet.vercel.app/	",
 	},
 	"Gaming Services": {
-		documentation:
-			"Web application for gaming services with comprehensive theme support. Features include:\n- Light and dark mode toggle\n- Persistent theme preferences\n- Responsive design for all devices\n- Intuitive user interface for purchasing and managing gaming subscriptions",
-
-		github: "https://github.com/HHlaingSwan/Gaming-Repository",
 		vercel: "https://hhlaingswan.github.io/Gaming-Repository/",
 	},
 	"Travel Blog": {
-		documentation:
-			"Responsive travel blog with smart theme adaptation. Features include:\n- Automatic light/dark mode based on system preferences\n- Manual theme override option\n- Optimized reading experience in both modes\n- Comprehensive travel guides and destination information",
-		github: "https://github.com/HHlaingSwan/Travel-Blog",
 		vercel: "https://hhlaingswan.github.io/Travel-Blog/",
 	},
 };

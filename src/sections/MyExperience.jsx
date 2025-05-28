@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
 	{
-		position: "Junior Frontend Developer",
+		position: " Frontend Developer",
 		company: "MY DAY THU KYAWL CO.LTD",
 		duration: "Dec 2024 - Present",
 		description: [
