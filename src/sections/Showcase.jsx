@@ -29,7 +29,7 @@ const projects = [
 		title: "Movie Platform",
 		description:
 			"A responsive movie browsing application with search functionality and dynamic content loading.",
-		tech: "React, API Integration, Responsive Design",
+		tech: "Next.js, API Integration, Responsive Design",
 		detailImages: "/Movie-PJ/h2.png",
 		type: "photo",
 	},
