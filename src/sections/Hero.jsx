@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaLightbulb, FaPaintBrush, FaCode } from "react-icons/fa";
 import heroVD from "../assets/heroVd2.mp4";
 import heroimg from "../assets/heroimg.jpg";
+import heroimg2 from "../assets/heroimg2.png";
 
 const words = ["Ideas", "Designs", "Concepts"];
 const icons = [<FaLightbulb />, <FaPaintBrush />, <FaCode />];
@@ -27,7 +28,7 @@ const Hero = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
-					className='text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2'>
+					className='text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-2'>
 					Shaping{" "}
 					<span className='relative inline-block h-[.9em] w-[8rem]'>
 						<AnimatePresence mode='wait'>
@@ -47,14 +48,14 @@ const Hero = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.4 }}
-					className='text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2'>
+					className='text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-2'>
 					into Real Projects
 				</motion.h1>
 				<motion.h1
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.6 }}
-					className='text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4'>
+					className='text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4'>
 					that Deliver Results
 				</motion.h1>
 
@@ -62,7 +63,7 @@ const Hero = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.8 }}
-					className='text-sm md:text-lg  md:text-gray-300 text-shadow-black mb-1'>
+					className='text-sm md:text-lg lg:text-xl  md:text-gray-300 text-shadow-black mb-1'>
 					Hi, I'm <span className='text-amber-500'>H.Hlaing Swan</span> , a
 					Frontend Developer based in Myanmar.
 				</motion.p>
@@ -70,7 +71,7 @@ const Hero = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 1.0 }}
-					className='text-sm md:text-lg md:text-gray-300 text-shadow-black mb-8'>
+					className='text-sm md:text-lg lg:text-xl md:text-gray-300 text-shadow-black mb-8'>
 					I specialize in creating responsive and user-friendly websites using
 					React.js.
 				</motion.p>
@@ -89,6 +90,11 @@ const Hero = () => {
 					muted
 					className='w-full h-full object-cover'
 				/>
+				{/* <img
+					src={heroimg2}
+					alt=''
+					className='w-full h-full'
+				/> */}
 			</div>
 			<div
 				className='w-full  h-screen

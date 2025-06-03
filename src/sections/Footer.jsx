@@ -106,7 +106,7 @@ const Footer = () => {
 						<a
 							href='mailto:your.email@example.com'
 							className='text-gray-400 hover:text-amber-400 transition-colors duration-300 flex items-center gap-2 mb-2'>
-							<FaEnvelope /> hhlaingswan.dev@email.com
+							<FaEnvelope /> htethlaingswan@gmail.com
 						</a>
 					</div>
 				</div>

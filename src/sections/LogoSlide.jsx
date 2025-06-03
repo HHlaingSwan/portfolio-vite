@@ -65,7 +65,7 @@ const LogoSlide = () => {
 	const duplicatedLogos = [...logos, ...logos];
 
 	return (
-		<section className='py-16 bg-gray-900  overflow-hidden'>
+		<section className='py-16 bg-gray-900 overflow-hidden'>
 			<div className='container mx-auto mb-8 text-center'>
 				<h2 className='text-3xl font-bold my-2'>Technologies I Work With</h2>
 				<p className='text-gray-400 max-w-xl mx-auto'>
@@ -74,8 +74,8 @@ const LogoSlide = () => {
 			</div>
 
 			<div className='relative'>
-				{/* First row of logos - moving left */}
-				<div className='flex overflow-hidden mb-8'>
+				{/* First row of logos - moving left with curved motion */}
+				<div className='flex overflow-hidden mb-8 py-4 relative'>
 					<motion.div
 						className='flex gap-16 px-4'
 						animate={{ x: [0, -2000] }}
@@ -88,24 +88,35 @@ const LogoSlide = () => {
 							},
 						}}>
 						{duplicatedLogos.map((logo, index) => (
-							<div
+							<motion.div
 								key={index}
-								className='flex flex-col items-center'>
+								className='flex flex-col items-center'
+								animate={{
+									y: [0, -10, 0],
+								}}
+								transition={{
+									y: {
+										repeat: Infinity,
+										repeatType: "mirror",
+										duration: 2 + (index % 3),
+										ease: "easeInOut",
+									},
+								}}>
 								<div
-									className='w-20 h-20 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 mb-2'
+									className='w-20 h-20 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-xl'
 									style={{ color: logo.color }}>
 									{logo.icon}
 								</div>
 								<span className='text-sm font-medium text-gray-300'>
 									{logo.name}
 								</span>
-							</div>
+							</motion.div>
 						))}
 					</motion.div>
 				</div>
 
-				{/* Second row of logos - moving right (in reverse order) */}
-				<div className='flex overflow-hidden'>
+				{/* Second row of logos - moving right (in reverse order) with curved motion */}
+				<div className='flex overflow-hidden py-4 relative'>
 					<motion.div
 						className='flex gap-16 px-4'
 						animate={{ x: [-2000, 0] }}
@@ -121,18 +132,29 @@ const LogoSlide = () => {
 							.slice()
 							.reverse()
 							.map((logo, index) => (
-								<div
+								<motion.div
 									key={index}
-									className='flex flex-col items-center'>
+									className='flex flex-col items-center'
+									animate={{
+										y: [0, 10, 0],
+									}}
+									transition={{
+										y: {
+											repeat: Infinity,
+											repeatType: "mirror",
+											duration: 2 + (index % 4),
+											ease: "easeInOut",
+										},
+									}}>
 									<div
-										className='w-20 h-20 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 mb-2'
+										className='w-20 h-20 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-xl'
 										style={{ color: logo.color }}>
 										{logo.icon}
 									</div>
 									<span className='text-sm font-medium text-gray-300'>
 										{logo.name}
 									</span>
-								</div>
+								</motion.div>
 							))}
 					</motion.div>
 				</div>
