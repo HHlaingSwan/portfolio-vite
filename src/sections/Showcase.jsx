@@ -21,6 +21,9 @@ const projectDetails = {
 	"Travel Blog": {
 		vercel: "https://hhlaingswan.github.io/Travel-Blog/",
 	},
+	"Meeting-App": {
+		vercel: "https://github.com/HHlaingSwan/Vibe-Call",
+	},
 };
 
 const projects = [
@@ -49,6 +52,15 @@ const projects = [
 			"A classic snake game with high scores and customizable difficulty levels.",
 		tech: "React, CSS Animations, Critical Rendering Path Optimization",
 		preview: "/Snake-Game/SnakeGameDemo.mp4",
+	},
+	{
+		image: "/Meeting-App/call-app.png",
+		title: "Meeting-App",
+		description:
+			"A video conferencing application with real-time chat and screen sharing features.",
+		tech: "React, WebRTC, Socket.io",
+		detailImages: "/Meeting-App/h1.png",
+		type: "photo",
 	},
 	{
 		image: "/Shopping/homeview.png",
