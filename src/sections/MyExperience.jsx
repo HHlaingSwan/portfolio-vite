@@ -10,7 +10,7 @@ const experiences = [
 	{
 		position: " Frontend Developer",
 		company: "MY DAY THU KYAWL CO.LTD",
-		duration: "Dec 2024 - Present",
+		duration: "Sep 2024 - Present",
 		description: [
 			"Developed responsive web applications using React and Next.js",
 			"Implemented state management solutions with Redux and Context API",
@@ -31,18 +31,18 @@ const experiences = [
 		],
 		technologies: ["HTML/CSS", "JavaScript", "Bootstrap", "Git"],
 	},
-	{
-		position: "Freelance Developer",
-		// company: "Self-employed",
-		duration: "2024",
-		description: [
-			"Designed and developed websites for small businesses",
-			"Implemented e-commerce solutions using modern technologies",
-			"Provided ongoing maintenance and support for clients",
-			"Managed project timelines and client expectations",
-		],
-		technologies: ["React", "MongoDB", "Node.js"],
-	},
+	// {
+	// 	position: "Freelance Developer",
+	// 	// company: "Self-employed",
+	// 	duration: "2024",
+	// 	description: [
+	// 		"Designed and developed websites for small businesses",
+	// 		"Implemented e-commerce solutions using modern technologies",
+	// 		"Provided ongoing maintenance and support for clients",
+	// 		"Managed project timelines and client expectations",
+	// 	],
+	// 	technologies: ["React", "MongoDB", "Node.js"],
+	// },
 ];
 
 const MyExperience = () => {

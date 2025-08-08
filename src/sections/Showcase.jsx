@@ -2,92 +2,30 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "antd";
 
-const projectDetails = {
-	"Movie Platform": {
-		vercel: "https://imdb-next-h-hlaing-swans-projects.vercel.app/",
-	},
-	"Arcane Website": {
-		vercel: "https://arcane-game.vercel.app/",
-	},
-	"Snake Game": {
-		vercel: "https://snake-game-black-eight.vercel.app/",
-	},
-	"E-Commerce Platform": {
-		vercel: "https://e-shop-three-jet.vercel.app/	",
-	},
-	"Gaming Services": {
-		vercel: "https://hhlaingswan.github.io/Gaming-Repository/",
-	},
-	"Travel Blog": {
-		vercel: "https://hhlaingswan.github.io/Travel-Blog/",
-	},
-	"Meeting-App": {
-		vercel: "https://github.com/HHlaingSwan/Vibe-Call",
-	},
-};
-
 const projects = [
 	{
 		image: "/Movie-PJ/homeview.png",
 		title: "Movie Platform",
 		description:
 			"A responsive movie browsing application with search functionality and dynamic content loading.",
-		tech: "Next.js, API Integration, Responsive Design",
-		detailImages: "/Movie-PJ/h2.png",
-		type: "photo",
+		tech: ["Next.js", "API Integration", "Responsive Design"],
+		vercel: "https://imdb-next-h-hlaing-swans-projects.vercel.app/",
 	},
 	{
 		image: "/Arcane/home.png",
 		title: "Arcane Website",
 		description:
 			"Fan website for the Arcane series with character profiles and interactive elements.",
-		tech: "React, CSS Animations, Styled Components",
-		detailImages: "/Arcane/h1.png",
-		type: "photo",
+		tech: ["React", "CSS Animations", "Styled Components"],
+		vercel: "https://arcane-game.vercel.app/",
 	},
 	{
 		image: "/Snake-Game/snake-game-demo.png",
 		title: "Snake Game",
 		description:
 			"A classic snake game with high scores and customizable difficulty levels.",
-		tech: "React, CSS Animations, Critical Rendering Path Optimization",
-		preview: "/Snake-Game/SnakeGameDemo.mp4",
-	},
-	{
-		image: "/Meeting-App/call-app.png",
-		title: "Meeting-App",
-		description:
-			"A video conferencing application with real-time chat and screen sharing features.",
-		tech: "React, WebRTC, Socket.io",
-		detailImages: "/Meeting-App/h1.png",
-		type: "photo",
-	},
-	{
-		image: "/Shopping/homeview.png",
-		title: "E-Commerce Platform",
-		description:
-			"Full-featured shopping website with product filtering and cart functionality.",
-		tech: "React, Context API, Tailwind CSS",
-		detailImages: "/Shopping/detailview.png",
-		type: "photo",
-	},
-	{
-		image: "/Game-Pro/home.png",
-		title: "Gaming Services",
-		description:
-			"Web application for gaming services with light/dark mode support, providing a platform for users to purchase and manage their gaming subscriptions.",
-		tech: "HTML, CSS, JavaScript, Theme Switching",
-		detailImages: "/Game-Pro/h4.png",
-		type: "photo",
-	},
-	{
-		image: "/Travel-Blog/home.png",
-		title: "Travel Blog",
-		description:
-			"Responsive travel blog with automatic light/dark mode detection based on user preferences, providing comprehensive information about destinations and travel tips.",
-		tech: "HTML, CSS, JavaScript, Media Queries, Theme Detection",
-		detailImages: "/Travel-Blog/h5.png",
-		type: "photo",
+		tech: ["React", "CSS Animations", "Critical Rendering Path Optimization"],
+		vercel: "https://snake-game-black-eight.vercel.app/",
 	},
 ];
 
@@ -153,20 +91,22 @@ const Showcase = () => {
 									{project.description}
 								</p>
 								<div className='flex flex-wrap gap-2 mb-4'>
-									{project.tech.split(", ").map((tech, i) => (
+									{project.tech.map((tech) => (
 										<span
-											key={i}
+											key={tech}
 											className='bg-amber-500/30 text-amber-100 text-xs px-2 py-1 rounded'>
 											{tech}
 										</span>
 									))}
 								</div>
-								<Button
-									className='bg-amber-500/10 text-amber-400 hover:text-amber-300 border-amber-500/30 hover:border-amber-400 w-full'
-									href={projectDetails[project.title].vercel}
-									target='_blank'>
-									Live Demo
-								</Button>
+								{project.vercel && (
+									<Button
+										className='bg-amber-500/10 text-amber-400 hover:text-amber-300 border-amber-500/30 hover:border-amber-400 w-full'
+										href={project.vercel}
+										target='_blank'>
+										Live Demo
+									</Button>
+								)}
 							</div>
 						) : (
 							<>
@@ -182,20 +122,22 @@ const Showcase = () => {
 									</p>
 									<div className='flex flex-wrap gap-2 items-center justify-between'>
 										<div className='flex flex-wrap gap-2'>
-											{project.tech.split(", ").map((tech, i) => (
+											{project.tech.map((tech) => (
 												<span
-													key={i}
+													key={tech}
 													className='bg-amber-500/30 text-amber-100 text-xs px-2 py-1 rounded'>
 													{tech}
 												</span>
 											))}
 										</div>
-										<Button
-											className='hover:text-amber-300 group-hover:opacity-100 transition-opacity duration-300'
-											href={projectDetails[project.title].vercel}
-											target='_blank'>
-											Live Demo
-										</Button>
+										{project.vercel && (
+											<Button
+												className='hover:text-amber-300 group-hover:opacity-100 transition-opacity duration-300'
+												href={project.vercel}
+												target='_blank'>
+												Live Demo
+											</Button>
+										)}
 									</div>
 								</div>
 							</>

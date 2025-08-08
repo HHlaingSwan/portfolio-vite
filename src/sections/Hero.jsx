@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLightbulb, FaPaintBrush, FaCode } from "react-icons/fa";
-import heroVD from "../assets/heroVd2.mp4";
+import heroVD from "../assets/heroVd.mp4";
 import heroimg from "../assets/heroimg.jpg";
 import heroimg2 from "../assets/heroimg2.png";
 
