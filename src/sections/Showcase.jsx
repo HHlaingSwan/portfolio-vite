@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "antd";
+import movieImage from "../assets/Movie-PJ/homeview.png";
+import arcaneImage from "../assets/Arcane/home.png";
+import snakeGameImage from "../assets/Snake-Game/snake-game-demo.png";
 
 const projects = [
 	{
-		image: "/Movie-PJ/homeview.png",
+		image: movieImage,
 		title: "Movie Platform",
 		description:
 			"A responsive movie browsing application with search functionality and dynamic content loading.",
@@ -12,7 +15,7 @@ const projects = [
 		vercel: "https://imdb-next-h-hlaing-swans-projects.vercel.app/",
 	},
 	{
-		image: "/Arcane/home.png",
+		image: arcaneImage,
 		title: "Arcane Website",
 		description:
 			"Fan website for the Arcane series with character profiles and interactive elements.",
@@ -20,7 +23,7 @@ const projects = [
 		vercel: "https://arcane-game.vercel.app/",
 	},
 	{
-		image: "/Snake-Game/snake-game-demo.png",
+		image: snakeGameImage,
 		title: "Snake Game",
 		description:
 			"A classic snake game with high scores and customizable difficulty levels.",

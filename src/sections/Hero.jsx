@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLightbulb, FaPaintBrush, FaCode } from "react-icons/fa";
+import heroVd from "../assets/heroVd.mp4";
+import heroimg from "../assets/heroimg.jpg";
 
 const words = ["Ideas", "Designs", "Concepts"];
 const icons = [<FaLightbulb />, <FaPaintBrush />, <FaCode />];
@@ -19,8 +21,8 @@ const Hero = () => {
 	return (
 		<section
 			id='home'
-			className=' h-100vh  '>
-			<div className='container h-100vh  px-4  md:pl-5 lg:pl-55  absolute top-50 md:top-80  lg:top-80 left-0   '>
+			className=' h-screen  '>
+			<div className='container h-screen  px-4  md:pl-5 lg:pl-55  absolute top-50 md:top-80  lg:top-80 left-0   '>
 				<motion.h1
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
@@ -79,9 +81,9 @@ const Hero = () => {
 				</button> */}
 			</div>
 
-			<div className='w-full h-screen hidden lg:inline'>
+			<div className='w-full h-screen  lg:inline'>
 				<video
-					src='/heroVd.mp4'
+					src={heroVd}
 					autoPlay
 					loop
 					muted
@@ -92,7 +94,7 @@ const Hero = () => {
 				className='w-full  h-screen
 			  lg:hidden'>
 				<img
-					src='/heroimg.jpg'
+					src={heroimg}
 					alt=''
 					className='w-full h-full'
 				/>
