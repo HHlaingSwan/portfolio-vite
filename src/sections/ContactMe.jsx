@@ -74,7 +74,7 @@ const ContactMe = () => {
 						<div className='relative'>
 							{/* Option 1: Use a remote URL (temporary solution) */}
 							<img
-								src='/undraw_dev-productivity_5wps.svg'
+								src='src/assets/undraw_dev-productivity_5wps.svg'
 								alt='Contact Illustration'
 								className='w-full max-w-md'
 							/>
