@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { FaPaperPlane, FaSpinner } from "react-icons/fa";
+import DemoImage from "../assets/undraw_dev-productivity_5wps.svg";
 
 const ContactMe = () => {
 	const formRef = useRef();
@@ -74,7 +75,7 @@ const ContactMe = () => {
 						<div className='relative'>
 							{/* Option 1: Use a remote URL (temporary solution) */}
 							<img
-								src='src/assets/undraw_dev-productivity_5wps.svg'
+								src={DemoImage}
 								alt='Contact Illustration'
 								className='w-full max-w-md'
 							/>
