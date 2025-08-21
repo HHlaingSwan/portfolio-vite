@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLightbulb, FaPaintBrush, FaCode } from "react-icons/fa";
-import heroVD from "../assets/heroVd.mp4";
-import heroimg from "../assets/heroimg.jpg";
-import heroimg2 from "../assets/heroimg2.png";
 
 const words = ["Ideas", "Designs", "Concepts"];
 const icons = [<FaLightbulb />, <FaPaintBrush />, <FaCode />];
@@ -84,23 +81,18 @@ const Hero = () => {
 
 			<div className='w-full h-screen hidden lg:inline'>
 				<video
-					src={heroVD}
+					src='/heroVd.mp4'
 					autoPlay
 					loop
 					muted
 					className='w-full h-full object-cover'
 				/>
-				{/* <img
-					src={heroimg2}
-					alt=''
-					className='w-full h-full'
-				/> */}
 			</div>
 			<div
 				className='w-full  h-screen
 			  lg:hidden'>
 				<img
-					src={heroimg}
+					src='/heroimg.jpg'
 					alt=''
 					className='w-full h-full'
 				/>
