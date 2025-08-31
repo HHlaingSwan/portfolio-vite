@@ -13,23 +13,41 @@ const Hero = () => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setCurrentWord((prev) => (prev + 1) % words.length);
-		}, 2000); // Change word every 2 seconds
-
+		}, 2000);
 		return () => clearInterval(interval);
 	}, []);
 
 	return (
 		<section
 			id='home'
-			className=' h-screen  '>
-			<div className='container h-screen  px-4  md:pl-5 lg:pl-55  absolute top-50 md:top-80  lg:top-80 left-0   '>
+			className='relative h-screen w-full overflow-hidden'>
+			{/* Background Video/Image */}
+			<div className='absolute inset-0 z-0'>
+				<video
+					src={heroVd}
+					autoPlay
+					loop
+					muted
+					className='hidden lg:block w-full h-full object-cover'
+				/>
+				<img
+					src={heroimg}
+					alt='Hero'
+					className='block lg:hidden w-full h-full object-cover'
+				/>
+				{/* Overlay */}
+				<div className='absolute inset-0 bg-black bg-opacity-60'></div>
+			</div>
+
+			{/* Content */}
+			<div className='relative z-10 flex flex-col justify-center items-center h-full px-4 text-center'>
 				<motion.h1
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5 }}
-					className='text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-2'>
+					className='text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4'>
 					Shaping{" "}
-					<span className='relative inline-block h-[.9em] w-[8rem]'>
+					<span className='relative inline-block h-[1em] w-[8rem]'>
 						<AnimatePresence mode='wait'>
 							<motion.span
 								key={currentWord}
@@ -54,7 +72,7 @@ const Hero = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.6 }}
-					className='text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-4'>
+					className='text-2xl md:text-3xl lg:text-5xl font-bold text-white mb-6'>
 					that Deliver Results
 				</motion.h1>
 
@@ -62,42 +80,27 @@ const Hero = () => {
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.8 }}
-					className='text-sm md:text-lg lg:text-xl  md:text-gray-300 text-shadow-black mb-1'>
-					Hi, I'm <span className='text-amber-500'>H.Hlaing Swan</span> , a
+					className='text-base md:text-lg lg:text-xl text-gray-200 mb-2'>
+					Hi, I'm <span className='text-amber-500'>H.Hlaing Swan</span>, a
 					Frontend Developer based in Myanmar.
 				</motion.p>
 				<motion.p
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 1.0 }}
-					className='text-sm md:text-lg lg:text-xl md:text-gray-300 text-shadow-black mb-8'>
+					className='text-base md:text-lg lg:text-xl text-gray-300 mb-8'>
 					I specialize in creating responsive and user-friendly websites using
 					React.js.
 				</motion.p>
-				{/* <button
-					onClick={() => console.log("Clicked")}
-					className='inline-block bg-white text-black font-semibold py-2 px-6 rounded shadow-md transition-all duration-300 ease-in-out hover:bg-black hover:text-white hover:shadow-lg active:scale-95'>
+				<motion.button
+					whileHover={{ scale: 1.05 }}
+					whileTap={{ scale: 0.95 }}
+					className='bg-amber-500 text-black font-semibold py-2 px-8 rounded shadow-lg transition-all duration-300 hover:bg-black hover:text-amber-500 border border-amber-500'
+					onClick={() =>
+						window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+					}>
 					See My Work
-				</button> */}
-			</div>
-
-			<div className='w-full h-screen  lg:inline'>
-				<video
-					src={heroVd}
-					autoPlay
-					loop
-					muted
-					className='w-full h-full object-cover'
-				/>
-			</div>
-			<div
-				className='w-full  h-screen
-			  lg:hidden'>
-				<img
-					src={heroimg}
-					alt=''
-					className='w-full h-full'
-				/>
+				</motion.button>
 			</div>
 		</section>
 	);
