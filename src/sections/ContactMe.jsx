@@ -60,7 +60,7 @@ const ContactMe = () => {
 	return (
 		<section
 			id='contact'
-			className='py-20 bg-gradient-to-b from-gray-900 to-gray-800'>
+			className='py-20 bg-gradient-to-b from-slate-900 to-slate-800'>
 			<div className='container mx-auto px-4'>
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -68,8 +68,8 @@ const ContactMe = () => {
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 					className='text-center mb-12'>
-					<h2 className='text-4xl font-bold mb-3 text-white'>Get In Touch</h2>
-					<p className='text-gray-300 max-w-xl mx-auto'>
+					<h2 className='text-4xl font-bold mb-3 text-slate-50'>Get In Touch</h2>
+					<p className='text-slate-300 max-w-xl mx-auto'>
 						Have a project in mind or want to collaborate? Feel free to reach
 						out!
 					</p>
@@ -100,11 +100,11 @@ const ContactMe = () => {
 						<form
 							ref={formRef}
 							onSubmit={handleSubmit}
-							className='bg-gray-800/50 backdrop-blur-sm p-8 rounded-lg shadow-xl border border-gray-700/50'>
+							className='bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg shadow-xl border border-slate-700/50'>
 							<div className='mb-6'>
 								<label
 									htmlFor='name'
-									className='block text-gray-200 mb-2 font-medium'>
+									className='block text-slate-200 mb-2 font-medium'>
 									Your Name
 								</label>
 								<input
@@ -115,14 +115,14 @@ const ContactMe = () => {
 									value={form.name}
 									onChange={handleChange}
 									required
-									className='w-full bg-gray-700/50 text-white border border-gray-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-300'
+									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300'
 								/>
 							</div>
 
 							<div className='mb-6'>
 								<label
 									htmlFor='email'
-									className='block text-gray-200 mb-2 font-medium'>
+									className='block text-slate-200 mb-2 font-medium'>
 									Your Email
 								</label>
 								<input
@@ -133,14 +133,14 @@ const ContactMe = () => {
 									value={form.email}
 									onChange={handleChange}
 									required
-									className='w-full bg-gray-700/50 text-white border border-gray-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-300'
+									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300'
 								/>
 							</div>
 
 							<div className='mb-6'>
 								<label
 									htmlFor='message'
-									className='block text-gray-200 mb-2 font-medium'>
+									className='block text-slate-200 mb-2 font-medium'>
 									Your Message
 								</label>
 								<textarea
@@ -151,13 +151,13 @@ const ContactMe = () => {
 									placeholder='Your message here...'
 									required
 									rows='5'
-									className='w-full bg-gray-700/50 text-white border border-gray-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all duration-300'></textarea>
+									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300'></textarea>
 							</div>
 
 							<button
 								type='submit'
 								disabled={loading}
-								className='w-full bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-4 rounded-md transition-all duration-300 flex items-center justify-center shadow-lg disabled:bg-gray-600'>
+								className='w-full bg-sky-500 hover:bg-sky-600 text-slate-900 font-bold py-3 px-4 rounded-md transition-all duration-300 flex items-center justify-center shadow-lg disabled:bg-slate-600'>
 								{loading ? (
 									<FiLoader className='animate-spin mr-2' />
 								) : (

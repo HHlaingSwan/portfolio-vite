@@ -4,9 +4,8 @@ html,
 body {
   margin: 0;
   padding: 0;
-  /* width: 100vw; */
-  background-color: black;
-  color: white;
+  background-color: #0f172a; /* bg-slate-900 */
+  color: #f8fafc; /* text-slate-50 */
   scroll-behavior: smooth;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -17,21 +16,21 @@ body {
 
 /* Custom Ant Design Modal styling */
 .project-modal .ant-modal-content {
-  background-color: #1f1f1f;
-  color: #e0e0e0;
+  background-color: #1e293b; /* slate-800 */
+  color: #cbd5e1; /* slate-300 */
 }
 
 .project-modal .ant-modal-header {
-  background-color: #1f1f1f;
-  border-bottom: 1px solid #333;
+  background-color: #1e293b; /* slate-800 */
+  border-bottom: 1px solid #334155; /* slate-700 */
 }
 
 .project-modal .ant-modal-body {
-  background-color: #1f1f1f;
-  color: #e0e0e0;
+  background-color: #1e293b; /* slate-800 */
+  color: #cbd5e1; /* slate-300 */
 }
 
 .project-modal .ant-modal-footer {
-  background-color: #1f1f1f;
-  border-top: 1px solid #333;
+  background-color: #1e293b; /* slate-800 */
+  border-top: 1px solid #334155; /* slate-700 */
 }

@@ -59,19 +59,19 @@ const LogoSlide = () => {
 	const duplicatedLogos = [...logos, ...logos];
 
 	return (
-		<section className='py-20 bg-gradient-to-b from-gray-900 via-gray-950 to-gray-900 relative overflow-hidden'>
+		<section className='py-20 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 relative overflow-hidden'>
 			<div className='container mx-auto mb-12 text-center'>
-				<h2 className='text-4xl font-extrabold text-white mb-4 tracking-tight'>
+				<h2 className='text-4xl font-extrabold text-slate-50 mb-4 tracking-tight'>
 					Technologies I Work With
 				</h2>
-				<p className='text-gray-400 max-w-xl mx-auto text-lg'>
+				<p className='text-slate-400 max-w-xl mx-auto text-lg'>
 					I’m proficient in these modern technologies and frameworks.
 				</p>
 			</div>
 
 			{/* Gradient overlays for fade effect */}
-			<div className='pointer-events-none absolute top-0 left-0 h-full w-32 z-20 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent' />
-			<div className='pointer-events-none absolute top-0 right-0 h-full w-32 z-20 bg-gradient-to-l from-gray-900 via-gray-900/80 to-transparent' />
+			<div className='pointer-events-none absolute top-0 left-0 h-full w-32 z-20 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent' />
+			<div className='pointer-events-none absolute top-0 right-0 h-full w-32 z-20 bg-gradient-to-l from-slate-900 via-slate-900/80 to-transparent' />
 
 			<div className='relative'>
 				{/* First row */}
@@ -103,7 +103,7 @@ const LogoSlide = () => {
 									},
 								}}>
 								<div
-									className='w-16 h-16 flex items-center justify-center rounded-xl bg-gray-800 hover:bg-gray-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-amber-500/30 cursor-pointer'
+									className='w-16 h-16 flex items-center justify-center rounded-xl bg-slate-800 hover:bg-slate-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-sky-500/30 cursor-pointer'
 									style={{ color: logo.color }}>
 									<motion.div
 										whileHover={{ scale: 1.18 }}
@@ -111,7 +111,7 @@ const LogoSlide = () => {
 										{logo.icon}
 									</motion.div>
 								</div>
-								<span className='text-xs font-medium text-gray-300'>
+								<span className='text-xs font-medium text-slate-300'>
 									{logo.name}
 								</span>
 							</motion.div>
@@ -151,7 +151,7 @@ const LogoSlide = () => {
 										},
 									}}>
 									<div
-										className='w-16 h-16 flex items-center justify-center rounded-xl bg-gray-800 hover:bg-gray-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-amber-500/30 cursor-pointer'
+										className='w-16 h-16 flex items-center justify-center rounded-xl bg-slate-800 hover:bg-slate-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-sky-500/30 cursor-pointer'
 										style={{ color: logo.color }}>
 										<motion.div
 											whileHover={{ scale: 1.18 }}
@@ -159,7 +159,7 @@ const LogoSlide = () => {
 											{logo.icon}
 										</motion.div>
 									</div>
-									<span className='text-xs font-medium text-gray-300'>
+									<span className='text-xs font-medium text-slate-300'>
 										{logo.name}
 									</span>
 								</motion.div>

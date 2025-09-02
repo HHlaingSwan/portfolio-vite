@@ -70,25 +70,25 @@ const ExperienceCard = ({ exp, index }) => {
 				isOdd ? "md:flex-row-reverse" : "md:flex-row"
 			}`}>
 			<div className='order-1 w-5/12 md:block  hidden'></div>
-			<div className='z-20 flex items-center  order-1 bg-gray-800  shadow-xl w-8 h-8  rounded-full'>
-				<h1 className='mx-auto font-semibold text-lg text-white'>
+			<div className='z-20 flex items-center  order-1 bg-slate-800  shadow-xl w-8 h-8  rounded-full'>
+				<h1 className='mx-auto font-semibold text-lg text-slate-50'>
 					{index + 1}
 				</h1>
 			</div>
 			<div
-				className={`order-1 w-full md:w-5/12 px-6 py-4 rounded-lg shadow-xl bg-gray-800/50 backdrop-blur-sm border border-gray-700/50`}>
+				className={`order-1 w-full md:w-5/12 px-6 py-4 rounded-lg shadow-xl bg-slate-800/50 backdrop-blur-sm border border-slate-700/50`}>
 				<div className={`flex items-center mb-4`}>
 					<div
-						className={`w-12 h-12 bg-amber-500/20 rounded-full flex items-center justify-center text-amber-400 text-xl mr-4`}>
+						className={`w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center text-sky-400 text-xl mr-4`}>
 						<FaBriefcase />
 					</div>
 					<div>
-						<h3 className='text-2xl font-bold text-white'>{exp.position}</h3>
-						<p className='text-amber-400 font-medium'>{exp.company}</p>
+						<h3 className='text-2xl font-bold text-slate-50'>{exp.position}</h3>
+						<p className='text-sky-400 font-medium'>{exp.company}</p>
 					</div>
 				</div>
-				<p className='text-gray-400 mb-4'>{exp.duration}</p>
-				<ul className='list-disc list-inside mb-4 text-gray-300 space-y-2'>
+				<p className='text-slate-400 mb-4'>{exp.duration}</p>
+				<ul className='list-disc list-inside mb-4 text-slate-300 space-y-2'>
 					{exp.description.map((item, i) => (
 						<li key={i}>{item}</li>
 					))}
@@ -97,7 +97,7 @@ const ExperienceCard = ({ exp, index }) => {
 					{exp.technologies.map((tech, i) => (
 						<span
 							key={i}
-							className='bg-gray-700/70 text-white text-xs px-3 py-1 rounded-full'>
+							className='bg-slate-700/70 text-slate-50 text-xs px-3 py-1 rounded-full'>
 							{tech}
 						</span>
 					))}
@@ -111,7 +111,7 @@ const MyExperience = () => {
 	return (
 		<section
 			id='experience'
-			className='py-20 bg-gray-900'>
+			className='py-20 bg-slate-900/80 backdrop-blur-sm'>
 			<div className='container mx-auto px-4'>
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -119,15 +119,15 @@ const MyExperience = () => {
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 					className='text-center mb-16'>
-					<h2 className='text-4xl font-bold mb-3 text-white'>My Experience</h2>
-					<p className='text-gray-400 max-w-2xl mx-auto'>
+					<h2 className='text-4xl font-bold mb-3 text-slate-50'>My Experience</h2>
+					<p className='text-slate-400 max-w-2xl mx-auto'>
 						A timeline of my professional journey and the skills I've developed
 						along the way.
 					</p>
 				</motion.div>
 
 				<div className='relative wrap overflow-hidden p-4 md:p-10 h-full'>
-					<div className='border-2-2 absolute border-opacity-20 border-gray-700 h-full border md:left-1/2 left-4'></div>
+					<div className='border-2-2 absolute border-opacity-20 border-slate-700 h-full border md:left-1/2 left-4'></div>
 					{experiences.map((exp, index) => (
 						<ExperienceCard
 							key={index}
