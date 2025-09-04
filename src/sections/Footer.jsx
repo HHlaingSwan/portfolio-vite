@@ -39,14 +39,14 @@ const Footer = () => {
 				<div className='absolute -top-6 left-1/2 -translate-x-1/2'>
 					<motion.button
 						onClick={scrollToTop}
-						className='bg-sky-500 hover:bg-sky-600 text-black p-4 rounded-full shadow-lg transition-all duration-300'
+						className='bg-sky-700 hover:bg-sky-800 text-black p-4 rounded-full shadow-lg transition-all duration-300'
 						whileHover={{ y: -5, scale: 1.1 }}
 						whileTap={{ scale: 0.9 }}>
 						<FaArrowUp />
 					</motion.button>
 				</div>
 				{/* <div className='mx-auto w-full text-center py-8 my-10'>
-					<p className='text-sky-400 text-xl font-semibold animate-pulse'>
+					<p className='text-sky-600 text-xl font-semibold animate-pulse'>
 						I Love You  ❤️
 					</p>
 				</div> */}
@@ -54,7 +54,7 @@ const Footer = () => {
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left'>
 					{/* About */}
 					<div>
-						<h3 className='text-2xl font-bold mb-4 text-sky-400'>
+						<h3 className='text-2xl font-bold mb-4 text-sky-600'>
 							H.Hlaing Swan
 						</h3>
 						<p className='text-slate-400 mb-4'>
@@ -63,7 +63,7 @@ const Footer = () => {
 						</p>
 						<a
 							href='mailto:htethlaingswan@gmail.com'
-							className='text-slate-400 hover:text-sky-400 transition-colors duration-300 flex items-center justify-center md:justify-start gap-2'>
+							className='text-slate-400 hover:text-sky-600 transition-colors duration-300 flex items-center justify-center md:justify-start gap-2'>
 							<FaEnvelope />
 							htethlaingswan@gmail.com
 						</a>
@@ -72,7 +72,7 @@ const Footer = () => {
 
 					{/* Quick Links */}
 					<div>
-						<h3 className='text-2xl font-bold mb-4 text-sky-400'>
+						<h3 className='text-2xl font-bold mb-4 text-sky-600'>
 							Quick Links
 						</h3>
 						<ul className='space-y-2'>
@@ -81,7 +81,7 @@ const Footer = () => {
 									<li key={link}>
 										<a
 											href={`#${link.toLowerCase()}`}
-											className='text-slate-400 hover:text-sky-400 transition-colors duration-300'>
+											className='text-slate-400 hover:text-sky-600 transition-colors duration-300'>
 											{link}
 										</a>
 									</li>
@@ -92,7 +92,7 @@ const Footer = () => {
 
 					{/* Social Links */}
 					<div>
-						<h3 className='text-2xl font-bold mb-4 text-sky-400'>
+						<h3 className='text-2xl font-bold mb-4 text-sky-600'>
 							Connect With Me
 						</h3>
 						<div className='flex justify-center md:justify-start space-x-6'>

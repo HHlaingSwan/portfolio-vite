@@ -156,7 +156,7 @@ const TopBar = () => {
 								<a
 									href={link.href}
 									onClick={handleLinkClick}
-									className='text-slate-200 hover:text-sky-500 transition-colors duration-300 text-2xl font-medium block'>
+									className='text-slate-200 hover:text-sky-700 transition-colors duration-300 text-2xl font-medium block'>
 									{link.name}
 								</a>
 							</motion.li>
@@ -171,7 +171,7 @@ const TopBar = () => {
 						}}
 						transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
 						whileTap={{ scale: 0.95 }}
-						className='bg-sky-500 text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-sky-400 transition-colors duration-300 mt-10 w-full cursor-pointer'>
+						className='bg-sky-700 text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-sky-800 transition-colors duration-300 mt-10 w-full cursor-pointer'>
 						Get in Touch
 					</motion.button>
 				</div>

@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { FiSend, FiLoader, FiCheckCircle, FiXCircle } from "react-icons/fi";
-import DemoImage from "../assets/undraw_dev-productivity_5wps.svg";
+import undrawProgramming from "../assets/undraw_programming_65t2.svg";
 
 const ContactMe = () => {
 	const formRef = useRef();
@@ -67,40 +67,42 @@ const ContactMe = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
-					className='text-center mb-12'>
-					<h2 className='text-4xl font-bold mb-3 text-slate-50'>Get In Touch</h2>
+					className='text-center  mb-12'>
+					<h2 className='text-4xl font-bold mb-3  text-slate-50'>
+						Get In Touch
+					</h2>
 					<p className='text-slate-300 max-w-xl mx-auto'>
 						Have a project in mind or want to collaborate? Feel free to reach
 						out!
 					</p>
 				</motion.div>
 
-				<div className='max-w-6xl mx-auto flex flex-col md:flex-row gap-12 items-center'>
+				<div className='max-w-6xl mx-auto flex flex-col  md:flex-row gap-12   items-center justify-center'>
 					{/* Illustration */}
 					<motion.div
-						initial={{ opacity: 0, x: -50 }}
-						whileInView={{ opacity: 1, x: 0 }}
+						initial={{ opacity: 0, scale: 0.9 }}
+						whileInView={{ opacity: 1, scale: 1 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.6 }}
-						className='w-full md:w-2/5 flex justify-center'>
+						className='w-full md:w-[45%] flex  justify-center'>
 						<img
-							src={DemoImage}
+							src={undrawProgramming}
 							alt='Contact Illustration'
-							className='w-full max-w-sm'
+							className='w-full h-full '
 						/>
 					</motion.div>
 
 					{/* Form */}
 					<motion.div
-						initial={{ opacity: 0, x: 50 }}
-						whileInView={{ opacity: 1, x: 0 }}
+						initial={{ opacity: 0, scale: 0.9 }}
+						whileInView={{ opacity: 1, scale: 1 }}
 						viewport={{ once: true }}
 						transition={{ duration: 0.6 }}
-						className='w-full md:w-3/5'>
+						className='w-full md:w-[55%]'>
 						<form
 							ref={formRef}
 							onSubmit={handleSubmit}
-							className='bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg shadow-xl border border-slate-700/50'>
+							className='bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg shadow-xl border  border-slate-700/50'>
 							<div className='mb-6'>
 								<label
 									htmlFor='name'
@@ -115,7 +117,7 @@ const ContactMe = () => {
 									value={form.name}
 									onChange={handleChange}
 									required
-									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300'
+									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-700 focus:border-transparent transition-all duration-300'
 								/>
 							</div>
 
@@ -133,7 +135,7 @@ const ContactMe = () => {
 									value={form.email}
 									onChange={handleChange}
 									required
-									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300'
+									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-700 focus:border-transparent transition-all duration-300'
 								/>
 							</div>
 
@@ -151,13 +153,13 @@ const ContactMe = () => {
 									placeholder='Your message here...'
 									required
 									rows='5'
-									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent transition-all duration-300'></textarea>
+									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-700 focus:border-transparent transition-all duration-300'></textarea>
 							</div>
 
 							<button
 								type='submit'
 								disabled={loading}
-								className='w-full bg-sky-500 hover:bg-sky-600 text-slate-900 font-bold py-3 px-4 rounded-md transition-all duration-300 flex items-center justify-center shadow-lg disabled:bg-slate-600'>
+								className='w-full bg-sky-700 hover:bg-sky-800 text-slate-900 font-bold py-3 px-4 rounded-md transition-all duration-300 flex items-center justify-center shadow-lg disabled:bg-slate-600'>
 								{loading ? (
 									<FiLoader className='animate-spin mr-2' />
 								) : (

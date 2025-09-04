@@ -79,12 +79,12 @@ const ExperienceCard = ({ exp, index }) => {
 				className={`order-1 w-full md:w-5/12 px-6 py-4 rounded-lg shadow-xl bg-slate-800/50 backdrop-blur-sm border border-slate-700/50`}>
 				<div className={`flex items-center mb-4`}>
 					<div
-						className={`w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center text-sky-400 text-xl mr-4`}>
+						className={`w-12 h-12 bg-sky-700/20 rounded-full flex items-center justify-center text-sky-600 text-xl mr-4`}>
 						<FaBriefcase />
 					</div>
 					<div>
 						<h3 className='text-2xl font-bold text-slate-50'>{exp.position}</h3>
-						<p className='text-sky-400 font-medium'>{exp.company}</p>
+						<p className='text-sky-600 font-medium'>{exp.company}</p>
 					</div>
 				</div>
 				<p className='text-slate-400 mb-4'>{exp.duration}</p>

@@ -103,7 +103,7 @@ const LogoSlide = () => {
 									},
 								}}>
 								<div
-									className='w-16 h-16 flex items-center justify-center rounded-xl bg-slate-800 hover:bg-slate-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-sky-500/30 cursor-pointer'
+									className='w-16 h-16 flex items-center justify-center rounded-xl bg-slate-800 hover:bg-slate-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-sky-700/30 cursor-pointer'
 									style={{ color: logo.color }}>
 									<motion.div
 										whileHover={{ scale: 1.18 }}
@@ -151,7 +151,7 @@ const LogoSlide = () => {
 										},
 									}}>
 									<div
-										className='w-16 h-16 flex items-center justify-center rounded-xl bg-slate-800 hover:bg-slate-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-sky-500/30 cursor-pointer'
+										className='w-16 h-16 flex items-center justify-center rounded-xl bg-slate-800 hover:bg-slate-700 transition-all duration-300 mb-2 shadow-lg hover:shadow-sky-700/30 cursor-pointer'
 										style={{ color: logo.color }}>
 										<motion.div
 											whileHover={{ scale: 1.18 }}

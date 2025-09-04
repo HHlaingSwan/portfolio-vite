@@ -70,7 +70,7 @@ const Showcase = () => {
 						
 						{/* Content that slides up */}
 						<div className='absolute inset-0 top-auto p-6 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out'>
-							<h3 className='text-2xl font-bold text-sky-400 mb-2'>
+							<h3 className='text-2xl font-bold text-sky-600 mb-2'>
 								{project.title}
 							</h3>
 							<p className='text-slate-300 mb-4 text-sm'>{project.description}</p>
@@ -78,7 +78,7 @@ const Showcase = () => {
 								{project.tech.map((tech) => (
 									<span
 										key={tech}
-										className='bg-sky-500/10 text-sky-300 text-xs px-3 py-1 rounded-full'>
+										className='bg-sky-700/10 text-sky-300 text-xs px-3 py-1 rounded-full'>
 										{tech}
 									</span>
 								))}
@@ -88,7 +88,7 @@ const Showcase = () => {
 									href={project.vercel}
 									target='_blank'
 									rel='noopener noreferrer'
-									className='inline-flex items-center font-medium text-sky-400 hover:text-sky-300 transition-colors duration-300 self-start'>
+									className='inline-flex items-center font-medium text-sky-600 hover:text-sky-500 transition-colors duration-300 self-start'>
 									Live Demo
 									<FiArrowRight className='ml-2' />
 								</a>

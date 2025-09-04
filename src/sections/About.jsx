@@ -122,21 +122,21 @@ const About = () => {
 					{/* Main timeline line that grows with scroll using GSAP */}
 					<div
 						ref={timelineRef}
-						className='absolute left-[7px] top-[30px] bottom-0 w-1 bg-sky-500 origin-top'></div>
+						className='absolute left-[7px] top-[30px] bottom-0 w-1 bg-sky-700 origin-top'></div>
 
 					{educationData.map((item, index) => (
 						<div
 							key={index}
 							className='mb-12 pl-10 relative'>
 							{/* Timeline Dot */}
-							<div className='absolute -left-1 top-2 w-6 h-6 rounded-full border-2 border-sky-500 flex items-center justify-center'>
-								<div className='w-4 h-4 rounded-full bg-sky-500'></div>
+							<div className='absolute -left-1 top-2 w-6 h-6 rounded-full border-2 border-sky-700 flex items-center justify-center'>
+								<div className='w-4 h-4 rounded-full bg-sky-700'></div>
 							</div>
 
 							{/* Content Card */}
-							<div className='education-card bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-700/50 hover:border-sky-500/50 transition-colors duration-300'>
+							<div className='education-card bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-700/50 hover:border-sky-700/50 transition-colors duration-300'>
 								<div className='flex items-center mb-4'>
-									<div className='w-12 h-12 bg-sky-500/20 rounded-full flex items-center justify-center mr-4 text-sky-400 text-xl'>
+									<div className='w-12 h-12 bg-sky-700/20 rounded-full flex items-center justify-center mr-4 text-sky-600 text-xl'>
 										{item.icon}
 									</div>
 									<h3 className='text-2xl font-bold text-slate-50'>
@@ -146,7 +146,7 @@ const About = () => {
 
 								{item.subtitle && (
 									<div className='mb-4'>
-										<h4 className='text-lg font-semibold text-sky-400'>
+										<h4 className='text-lg font-semibold text-sky-600'>
 											{item.subtitle}
 										</h4>
 										{item.date && (
