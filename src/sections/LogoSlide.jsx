@@ -31,6 +31,7 @@ import {
 
 const LogoSlide = () => {
 	const logos = [
+		{ icon: <FaJava size={44} />, name: "Java", color: "#007396" },
 		{ icon: <FaReact size={44} />, name: "React", color: "#61DAFB" },
 		{ icon: <SiNextdotjs size={44} />, name: "Next.js", color: "#000000" },
 		{ icon: <SiMongodb size={44} />, name: "MongoDB", color: "#47A248" },

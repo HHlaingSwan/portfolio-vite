@@ -76,15 +76,14 @@ const Hero = () => {
 					className='text-base md:text-lg lg:text-xl text-slate-200 mb-2 max-w-2xl'>
 					Hi, I'm{" "}
 					<span className='text-sky-600 font-medium'>H.Hlaing Swan</span>, a
-					Frontend Developer based in Myanmar.
+					Full-Stack Developer based in Myanmar.
 				</motion.p>
 				<motion.p
 					initial={{ opacity: 0, y: 20 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 1.0 }}
 					className='text-base md:text-lg lg:text-xl text-slate-300 mb-8 max-w-2xl'>
-					I specialize in creating responsive and user-friendly websites using
-					React.js.
+					I specialize in building complete web applications, from the user interface to the server-side logic.
 				</motion.p>
 				<motion.button
 					initial={{ opacity: 0, y: 20 }}

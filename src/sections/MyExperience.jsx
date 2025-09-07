@@ -8,28 +8,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const experiences = [
 	{
-		position: "Frontend Developer",
+		position: "Full-Stack Developer",
 		company: "MY DAY THU KYAWL CO.LTD",
 		duration: "Sep 2024 - Present",
 		description: [
-			"Developed responsive web applications using React and Next.js",
-			"Implemented state management solutions with Redux and Context API",
-			"Collaborated with UI/UX designers to create intuitive user interfaces",
-			"Integrated APIs to enhance functionality and data retrieval",
+			"Developed and maintained full-stack web applications using the MERN stack (MongoDB, Express.js, React, Node.js) and Next.js.",
+			"Designed and implemented RESTful APIs to support front-end functionality and data management.",
+			"Collaborated with cross-functional teams to deliver high-quality software products.",
+			"Integrated third-party services and APIs to extend application capabilities.",
 		],
-		technologies: ["React", "Next.js", "Tailwind CSS", "Redux"],
+		technologies: ["React", "Next.js", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
 	},
 	{
 		position: "Web Developer Intern",
 		company: "Company Name",
 		duration: "Sep 2024 - Nov 2024",
 		description: [
-			"Assisted in building and maintaining client websites",
-			"Created reusable components for the company's component library",
-			"Participated in code reviews and implemented feedback",
-			"Learned and applied best practices for web accessibility",
+			"Gained hands-on experience with both front-end and back-end development.",
+			"Assisted in building and maintaining client websites using HTML, CSS, JavaScript, and PHP.",
+			"Contributed to the development of a full-stack project, learning about databases and server-side logic.",
+			"Participated in code reviews and learned best practices for software development.",
 		],
-		technologies: ["HTML/CSS", "JavaScript", "Bootstrap", "Git"],
+		technologies: ["HTML/CSS", "JavaScript", "PHP", "MySQL", "Git"],
 	},
 ];
 

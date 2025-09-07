@@ -46,8 +46,7 @@ const Showcase = () => {
 				className='text-center mb-12'>
 				<h2 className='text-4xl font-bold mb-3'>My Work Showcase</h2>
 				<p className='text-slate-400 max-w-2xl mx-auto'>
-					A collection of recent projects, showcasing design, responsiveness,
-					and creativity.
+					A collection of recent projects, showcasing my skills in front-end and back-end development.
 				</p>
 			</motion.div>
 

@@ -58,8 +58,7 @@ const Footer = () => {
 							H.Hlaing Swan
 						</h3>
 						<p className='text-slate-400 mb-4'>
-							Frontend developer specializing in creating responsive and
-							user-friendly websites using React.js.
+							Full-stack developer specializing in creating responsive and user-friendly web applications.
 						</p>
 						<a
 							href='mailto:htethlaingswan@gmail.com'
