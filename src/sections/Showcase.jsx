@@ -36,7 +36,7 @@ const Showcase = () => {
 	return (
 		<section
 			id='projects'
-			className='px-4 py-16 max-w-7xl mx-auto'>
+			className='px-4 py-16 max-w-7xl mx-auto overflow-hidden'>
 			{/* Section Header */}
 			<motion.div
 				initial={{ opacity: 0, y: 20 }}
@@ -45,8 +45,9 @@ const Showcase = () => {
 				transition={{ duration: 0.5 }}
 				className='text-center mb-12'>
 				<h2 className='text-4xl font-bold mb-3'>My Work Showcase</h2>
-				<p className='text-slate-400 max-w-2xl mx-auto'>
-					A collection of recent projects, showcasing my skills in front-end and back-end development.
+				<p className='text-[var(--color-text-tertiary)] max-w-2xl mx-auto'>
+					A collection of recent projects, showcasing my skills in front-end and
+					back-end development.
 				</p>
 			</motion.div>
 
@@ -55,29 +56,31 @@ const Showcase = () => {
 				{projects.map((project, index) => (
 					<motion.div
 						key={index}
-						initial={{ opacity: 0, y: 50 }}
-						whileInView={{ opacity: 1, y: 0 }}
+						initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+						whileInView={{ opacity: 1, x: 0 }}
 						viewport={{ once: true, amount: 0.2 }}
 						transition={{ duration: 0.5, delay: index * 0.1 }}
-						className='group relative overflow-hidden rounded-2xl shadow-lg'>
+						className='group relative overflow-hidden rounded-2xl shadow-lg h-96'>
 						{/* Image */}
 						<img
 							src={project.image}
 							alt={project.title}
-							className='w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105'
+							className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-105'
 						/>
-						
+
 						{/* Content that slides up */}
-						<div className='absolute inset-0 top-auto p-6 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out'>
-							<h3 className='text-2xl font-bold text-sky-600 mb-2'>
+						<div className='absolute inset-0 top-auto p-6 bg-gradient-to-t from-[var(--color-bg-primary)] via-[var(--color-bg-primary)]/80 to-transparent backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-all duration-500 ease-in-out'>
+							<h3 className='text-2xl font-bold text-[var(--color-accent-light)] mb-2'>
 								{project.title}
 							</h3>
-							<p className='text-slate-300 mb-4 text-sm'>{project.description}</p>
+							<p className='text-[var(--color-text-subtle)] mb-4 text-sm'>
+								{project.description}
+							</p>
 							<div className='flex flex-wrap gap-2 mb-4'>
 								{project.tech.map((tech) => (
 									<span
 										key={tech}
-										className='bg-sky-700/10 text-sky-300 text-xs px-3 py-1 rounded-full'>
+										className='bg-[var(--color-accent-light)]/10 text-[var(--color-accent-subtle)] text-xs px-3 py-1 rounded-full'>
 										{tech}
 									</span>
 								))}
@@ -87,7 +90,7 @@ const Showcase = () => {
 									href={project.vercel}
 									target='_blank'
 									rel='noopener noreferrer'
-									className='inline-flex items-center font-medium text-sky-600 hover:text-sky-500 transition-colors duration-300 self-start'>
+									className='inline-flex items-center font-medium text-[var(--color-accent-light)] hover:text-[var(--color-accent-lighter)] transition-colors duration-300 self-start mt-auto'>
 									Live Demo
 									<FiArrowRight className='ml-2' />
 								</a>

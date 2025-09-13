@@ -1,12 +1,56 @@
-# React + Vite
+# React Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal portfolio website built with React, Vite, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+*   **Introduction Screen:** A loading animation followed by a welcome message.
+*   **Smooth Animations:** Utilizes Framer Motion and GSAP for smooth animations and transitions.
+*   **3D Graphics:** Integrates Three.js and React Three Fiber for 3D elements.
+*   **Responsive Design:** Designed to work on various screen sizes.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*   **Frontend:** React, Vite, Tailwind CSS
+*   **Animations:** Framer Motion, GSAP
+*   **3D:** Three.js, React Three Fiber
+*   **Email:** EmailJS
+*   **Icons:** React Icons
+
+## Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+*   npm
+    ```sh
+    npm install npm@latest -g
+    ```
+
+### Installation
+
+1.  Clone the repo
+    ```sh
+    git clone https://github.com/your_username/your_repository.git
+    ```
+2.  Install NPM packages
+    ```sh
+    npm install
+    ```
+
+### Usage
+
+To run the app in the development mode, run:
+
+```sh
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+To build the app for production, run:
+
+```sh
+npm run build
+```

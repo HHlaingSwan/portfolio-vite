@@ -4,33 +4,81 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #0f172a; /* bg-slate-900 */
-  color: #f8fafc; /* text-slate-50 */
+  background-color: var(--color-bg-primary);
+  color: #f8fafc;
+  /* text-slate-50 */
   scroll-behavior: smooth;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 :root {
-  --gradient: radial-gradient(circle, #e5e5e5, 0%, #fff 100%)
+  --gradient: radial-gradient(circle, #e5e5e5, 0%, #fff 100%);
+  --color-bg-primary: #0f172a;
+  /* slate-900 */
+  --color-bg-secondary: #1e293b;
+  /* slate-800 */
+  --color-bg-tertiary: #334155;
+  /* slate-700 */
+
+  --color-accent: #4f46e5;
+  /* indigo-600 */
+  --color-accent-light: #6366f1;
+  /* indigo-500 */
+  --color-accent-lighter: #818cf8;
+  /* indigo-400 */
+  --color-accent-darker: #4338ca;
+  /* indigo-700 */
+  --color-accent-subtle: #a5b4fc;
+  /* indigo-300 */
+  --color-accent-shadow: rgba(99, 102, 241, 0.5);
+
+  --color-text-primary: #f8fafc;
+  /* slate-50 */
+  --color-text-secondary: #e2e8f0;
+  /* slate-200 */
+  --color-text-tertiary: #94a3b8;
+  /* slate-400 */
+  --color-text-subtle: #cbd5e1;
+  /* slate-300 */
 }
 
-/* Custom Ant Design Modal styling */
-.project-modal .ant-modal-content {
-  background-color: #1e293b; /* slate-800 */
-  color: #cbd5e1; /* slate-300 */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
-.project-modal .ant-modal-header {
-  background-color: #1e293b; /* slate-800 */
-  border-bottom: 1px solid #334155; /* slate-700 */
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #fbbf24;
+    /* amber-400 */
+  }
 }
 
-.project-modal .ant-modal-body {
-  background-color: #1e293b; /* slate-800 */
-  color: #cbd5e1; /* slate-300 */
+.typing-animation {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fbbf24;
+  animation: typing 3s steps(25, end), blink-caret 0.75s step-end infinite;
 }
 
-.project-modal .ant-modal-footer {
-  background-color: #1e293b; /* slate-800 */
-  border-top: 1px solid #334155; /* slate-700 */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
 }

@@ -99,7 +99,7 @@ const About = () => {
 	return (
 		<section
 			id='about'
-			className='py-20 bg-slate-900'>
+			className='py-20 bg-[var(--color-bg-primary)]'>
 			<div className='container mx-auto px-4'>
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -107,10 +107,10 @@ const About = () => {
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 					className='text-center mb-16'>
-					<h2 className='text-4xl font-bold mb-3 text-slate-50'>
+					<h2 className='text-4xl font-bold mb-3 text-[var(--color-text-primary)]'>
 						About My Education
 					</h2>
-					<p className='text-slate-400 max-w-2xl mx-auto'>
+					<p className='text-[var(--color-text-tertiary)] max-w-2xl mx-auto'>
 						Explore my academic background and the skills I've gained throughout
 						my educational journey.
 					</p>
@@ -122,35 +122,35 @@ const About = () => {
 					{/* Main timeline line that grows with scroll using GSAP */}
 					<div
 						ref={timelineRef}
-						className='absolute left-[7px] top-[30px] bottom-0 w-1 bg-sky-700 origin-top'></div>
+						className='absolute left-[7px] top-[30px] bottom-0 w-1 bg-[var(--color-accent)] origin-top'></div>
 
 					{educationData.map((item, index) => (
 						<div
 							key={index}
 							className='mb-12 pl-10 relative'>
 							{/* Timeline Dot */}
-							<div className='absolute -left-1 top-2 w-6 h-6 rounded-full border-2 border-sky-700 flex items-center justify-center'>
-								<div className='w-4 h-4 rounded-full bg-sky-700'></div>
+							<div className='absolute -left-1 top-2 w-6 h-6 rounded-full border-2 border-[var(--color-accent)] flex items-center justify-center'>
+								<div className='w-4 h-4 rounded-full bg-[var(--color-accent)]'></div>
 							</div>
 
 							{/* Content Card */}
-							<div className='education-card bg-slate-800/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-slate-700/50 hover:border-sky-700/50 transition-colors duration-300'>
+							<div className='education-card bg-[var(--color-bg-secondary)]/50 backdrop-blur-sm p-6 rounded-lg shadow-lg border border-[var(--color-bg-tertiary)]/50 hover:border-[var(--color-accent-light)]/50 transition-colors duration-300'>
 								<div className='flex items-center mb-4'>
-									<div className='w-12 h-12 bg-sky-700/20 rounded-full flex items-center justify-center mr-4 text-sky-600 text-xl'>
+									<div className='w-12 h-12 bg-[var(--color-accent-light)]/20 rounded-full flex items-center justify-center mr-4 text-[var(--color-accent-light)] text-xl'>
 										{item.icon}
 									</div>
-									<h3 className='text-2xl font-bold text-slate-50'>
+									<h3 className='text-2xl font-bold text-[var(--color-text-primary)]'>
 										{item.title}
 									</h3>
 								</div>
 
 								{item.subtitle && (
 									<div className='mb-4'>
-										<h4 className='text-lg font-semibold text-sky-600'>
+										<h4 className='text-lg font-semibold text-[var(--color-accent-light)]'>
 											{item.subtitle}
 										</h4>
 										{item.date && (
-											<div className='flex items-center text-slate-400 mt-1'>
+											<div className='flex items-center text-[var(--color-text-tertiary)] mt-1'>
 												<FaCalendarAlt className='mr-2' />
 												<span>{item.date}</span>
 											</div>
@@ -159,7 +159,9 @@ const About = () => {
 								)}
 
 								{item.description && (
-									<p className='text-slate-300'>{item.description}</p>
+									<p className='text-[var(--color-text-subtle)]'>
+										{item.description}
+									</p>
 								)}
 
 								{item.courses && (
@@ -167,7 +169,7 @@ const About = () => {
 										{item.courses.map((course, i) => (
 											<li
 												key={i}
-												className='bg-slate-700/70 p-3 rounded-md text-slate-300 text-sm'>
+												className='bg-[var(--color-bg-tertiary)]/70 p-3 rounded-md text-[var(--color-text-subtle)] text-sm'>
 												{course}
 											</li>
 										))}
@@ -175,7 +177,7 @@ const About = () => {
 								)}
 
 								{item.achievements && (
-									<ul className='list-disc list-inside text-slate-300 space-y-2'>
+									<ul className='list-disc list-inside text-[var(--color-text-subtle)] space-y-2'>
 										{item.achievements.map((achievement, i) => (
 											<li key={i}>{achievement}</li>
 										))}

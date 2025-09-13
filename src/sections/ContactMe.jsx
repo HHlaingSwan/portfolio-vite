@@ -60,7 +60,7 @@ const ContactMe = () => {
 	return (
 		<section
 			id='contact'
-			className='py-20 bg-gradient-to-b from-slate-900 to-slate-800'>
+			className='py-20 bg-gradient-to-b from-[var(--color-bg-primary)] to-[var(--color-bg-secondary)]'>
 			<div className='container mx-auto px-4'>
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -68,10 +68,10 @@ const ContactMe = () => {
 					viewport={{ once: true }}
 					transition={{ duration: 0.5 }}
 					className='text-center  mb-12'>
-					<h2 className='text-4xl font-bold mb-3  text-slate-50'>
+					<h2 className='text-4xl font-bold mb-3  text-[var(--color-text-primary)]'>
 						Get In Touch
 					</h2>
-					<p className='text-slate-300 max-w-xl mx-auto'>
+					<p className='text-[var(--color-text-subtle)] max-w-xl mx-auto'>
 						Have a project in mind or want to collaborate? Feel free to reach
 						out!
 					</p>
@@ -102,11 +102,11 @@ const ContactMe = () => {
 						<form
 							ref={formRef}
 							onSubmit={handleSubmit}
-							className='bg-slate-800/50 backdrop-blur-sm p-8 rounded-lg shadow-xl border  border-slate-700/50'>
+							className='bg-[var(--color-bg-secondary)]/50 backdrop-blur-sm p-8 rounded-lg shadow-xl border  border-[var(--color-bg-tertiary)]/50'>
 							<div className='mb-6'>
 								<label
 									htmlFor='name'
-									className='block text-slate-200 mb-2 font-medium'>
+									className='block text-[var(--color-text-secondary)] mb-2 font-medium'>
 									Your Name
 								</label>
 								<input
@@ -117,14 +117,14 @@ const ContactMe = () => {
 									value={form.name}
 									onChange={handleChange}
 									required
-									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-700 focus:border-transparent transition-all duration-300'
+									className='w-full bg-[var(--color-bg-tertiary)]/50 text-[var(--color-text-primary)] border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-light)] focus:border-transparent transition-all duration-300'
 								/>
 							</div>
 
 							<div className='mb-6'>
 								<label
 									htmlFor='email'
-									className='block text-slate-200 mb-2 font-medium'>
+									className='block text-[var(--color-text-secondary)] mb-2 font-medium'>
 									Your Email
 								</label>
 								<input
@@ -135,14 +135,14 @@ const ContactMe = () => {
 									value={form.email}
 									onChange={handleChange}
 									required
-									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-700 focus:border-transparent transition-all duration-300'
+									className='w-full bg-[var(--color-bg-tertiary)]/50 text-[var(--color-text-primary)] border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-light)] focus:border-transparent transition-all duration-300'
 								/>
 							</div>
 
 							<div className='mb-6'>
 								<label
 									htmlFor='message'
-									className='block text-slate-200 mb-2 font-medium'>
+									className='block text-[var(--color-text-secondary)] mb-2 font-medium'>
 									Your Message
 								</label>
 								<textarea
@@ -153,13 +153,13 @@ const ContactMe = () => {
 									placeholder='Your message here...'
 									required
 									rows='5'
-									className='w-full bg-slate-700/50 text-slate-50 border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-sky-700 focus:border-transparent transition-all duration-300'></textarea>
+									className='w-full bg-[var(--color-bg-tertiary)]/50 text-[var(--color-text-primary)] border border-slate-600 rounded-md py-3 px-4 focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-light)] focus:border-transparent transition-all duration-300'></textarea>
 							</div>
 
 							<button
 								type='submit'
 								disabled={loading}
-								className='w-full bg-sky-700 hover:bg-sky-800 text-slate-900 font-bold py-3 px-4 rounded-md transition-all duration-300 flex items-center justify-center shadow-lg disabled:bg-slate-600'>
+								className='w-full bg-[var(--color-accent)] hover:bg-[var(--color-accent-darker)] text-slate-900 font-bold py-3 px-4 rounded-md transition-all duration-300 flex items-center justify-center shadow-lg disabled:bg-slate-600'>
 								{loading ? (
 									<FiLoader className='animate-spin mr-2' />
 								) : (

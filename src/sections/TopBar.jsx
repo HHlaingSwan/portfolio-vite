@@ -57,10 +57,10 @@ const TopBar = () => {
 					<motion.div
 						whileHover={{ rotate: 360 }}
 						transition={{ duration: 0.5 }}
-						className='w-10 h-10 bg-sky-500 rounded-full flex items-center justify-center text-black font-bold text-xl mr-3'>
+						className='w-10 h-10 bg-[var(--color-accent-light)] rounded-full flex items-center justify-center text-black font-bold text-xl mr-3'>
 						H
 					</motion.div>
-					<span className='text-slate-50 font-bold hidden lg:inline text-xl'>
+					<span className='text-[var(--color-text-primary)] font-bold hidden lg:inline text-xl'>
 						Hlaing Swan
 					</span>
 				</div>
@@ -75,9 +75,9 @@ const TopBar = () => {
 								transition={{ type: "spring", stiffness: 300 }}>
 								<a
 									href={link.href}
-									className='text-slate-300 hover:text-sky-500 transition-colors duration-300 relative group'>
+									className='text-[var(--color-text-subtle)] hover:text-[var(--color-accent-light)] transition-colors duration-300 relative group'>
 									{link.name}
-									<span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-500 group-hover:w-full transition-all duration-300'></span>
+									<span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-[var(--color-accent-light)] group-hover:w-full transition-all duration-300'></span>
 								</a>
 							</motion.li>
 						))}
@@ -89,7 +89,7 @@ const TopBar = () => {
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
 					onClick={handleGetInTouchClick}
-					className='bg-sky-500 text-slate-900 px-5 py-2 rounded-full font-medium hover:bg-sky-400 transition-colors duration-300 cursor-pointer'>
+					className='bg-[var(--color-accent-light)] text-slate-900 px-5 py-2 rounded-full font-medium hover:bg-[var(--color-accent-lighter)] transition-colors duration-300 cursor-pointer'>
 					Get in Touch
 				</motion.button>
 			</motion.div>
@@ -101,15 +101,17 @@ const TopBar = () => {
 				transition={{ duration: 0.5 }}
 				className={`fixed top-0 left-0 right-0 z-50 px-4 py-4 ${
 					scrolled
-						? "bg-slate-900/90 backdrop-blur-md shadow-lg"
+						? "bg-[var(--color-bg-primary)]/90 backdrop-blur-md shadow-lg"
 						: "bg-transparent"
 				} transition-all duration-300 md:hidden flex justify-between items-center`}>
 				{/* Mobile Logo */}
 				<div className='flex items-center'>
-					<div className='w-8 h-8 bg-sky-500 rounded-full flex items-center justify-center text-black font-bold text-lg mr-2'>
+					<div className='w-8 h-8 bg-[var(--color-accent-light)] rounded-full flex items-center justify-center text-black font-bold text-lg mr-2'>
 						H
 					</div>
-					<span className='text-slate-50 font-bold text-lg'>Hlaing Swan</span>
+					<span className='text-[var(--color-text-primary)] font-bold text-lg'>
+						Hlaing Swan
+					</span>
 				</div>
 
 				{/* Mobile Menu Button */}
@@ -156,7 +158,7 @@ const TopBar = () => {
 								<a
 									href={link.href}
 									onClick={handleLinkClick}
-									className='text-slate-200 hover:text-sky-700 transition-colors duration-300 text-2xl font-medium block'>
+									className='text-[var(--color-text-secondary)] hover:text-[var(--color-accent-light)] transition-colors duration-300 text-2xl font-medium block'>
 									{link.name}
 								</a>
 							</motion.li>
@@ -171,7 +173,7 @@ const TopBar = () => {
 						}}
 						transition={{ duration: 0.3, delay: navLinks.length * 0.1 }}
 						whileTap={{ scale: 0.95 }}
-						className='bg-sky-700 text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-sky-800 transition-colors duration-300 mt-10 w-full cursor-pointer'>
+						className='bg-[var(--color-accent)] text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-[var(--color-accent-darker)] transition-colors duration-300 mt-10 w-full cursor-pointer'>
 						Get in Touch
 					</motion.button>
 				</div>
